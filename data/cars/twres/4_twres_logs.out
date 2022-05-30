@@ -1,0 +1,907 @@
+/usr/lib/jvm/graalvm-ce-java16-21.2.0/bin/java -javaagent:/home/hegemon/software/idea/lib/idea_rt.jar=36655:/home/hegemon/software/idea/bin -Dfile.encoding=UTF-8 -classpath /home/hegemon/projects/archon/phoebe/target/classes:/home/hegemon/projects/archon/common/target/classes:/home/hegemon/.m2/repository/io/fabric8/kubernetes-client/5.10.1/kubernetes-client-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-core/5.10.1/kubernetes-model-core-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-common/5.10.1/kubernetes-model-common-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-rbac/5.10.1/kubernetes-model-rbac-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-admissionregistration/5.10.1/kubernetes-model-admissionregistration-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-apps/5.10.1/kubernetes-model-apps-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-autoscaling/5.10.1/kubernetes-model-autoscaling-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-apiextensions/5.10.1/kubernetes-model-apiextensions-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-batch/5.10.1/kubernetes-model-batch-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-certificates/5.10.1/kubernetes-model-certificates-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-coordination/5.10.1/kubernetes-model-coordination-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-discovery/5.10.1/kubernetes-model-discovery-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-events/5.10.1/kubernetes-model-events-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-extensions/5.10.1/kubernetes-model-extensions-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-flowcontrol/5.10.1/kubernetes-model-flowcontrol-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-networking/5.10.1/kubernetes-model-networking-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-metrics/5.10.1/kubernetes-model-metrics-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-policy/5.10.1/kubernetes-model-policy-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-scheduling/5.10.1/kubernetes-model-scheduling-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-storageclass/5.10.1/kubernetes-model-storageclass-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-node/5.10.1/kubernetes-model-node-5.10.1.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.13.0/jackson-dataformat-yaml-2.13.0.jar:/home/hegemon/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.0/jackson-datatype-jsr310-2.13.0.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.jar:/home/hegemon/.m2/repository/io/fabric8/zjsonpatch/0.3.0/zjsonpatch-0.3.0.jar:/home/hegemon/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/home/hegemon/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/home/hegemon/.m2/repository/io/fabric8/chaosmesh-client/5.10.1/chaosmesh-client-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/chaosmesh-model/5.10.1/chaosmesh-model-5.10.1.jar:/home/hegemon/.m2/repository/com/squareup/retrofit2/retrofit/2.9.0/retrofit-2.9.0.jar:/home/hegemon/.m2/repository/com/squareup/retrofit2/converter-gson/2.9.0/converter-gson-2.9.0.jar:/home/hegemon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/hegemon/.m2/repository/com/google/cloud/google-cloud-container/1.5.0/google-cloud-container-1.5.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-api/1.39.0/grpc-api-1.39.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-context/1.39.0/grpc-context-1.39.0.jar:/home/hegemon/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/hegemon/.m2/repository/io/grpc/grpc-stub/1.39.0/grpc-stub-1.39.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-protobuf/1.39.0/grpc-protobuf-1.39.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-protobuf-lite/1.39.0/grpc-protobuf-lite-1.39.0.jar:/home/hegemon/.m2/repository/com/google/api/api-common/1.10.4/api-common-1.10.4.jar:/home/hegemon/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/hegemon/.m2/repository/com/google/auto/value/auto-value-annotations/1.8.1/auto-value-annotations-1.8.1.jar:/home/hegemon/.m2/repository/com/google/protobuf/protobuf-java/3.17.3/protobuf-java-3.17.3.jar:/home/hegemon/.m2/repository/com/google/api/grpc/proto-google-common-protos/2.3.2/proto-google-common-protos-2.3.2.jar:/home/hegemon/.m2/repository/com/google/api/grpc/proto-google-cloud-container-v1beta1/1.5.0/proto-google-cloud-container-v1beta1-1.5.0.jar:/home/hegemon/.m2/repository/com/google/api/grpc/proto-google-cloud-container-v1/1.5.0/proto-google-cloud-container-v1-1.5.0.jar:/home/hegemon/.m2/repository/com/google/guava/guava/30.1.1-android/guava-30.1.1-android.jar:/home/hegemon/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/hegemon/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/hegemon/.m2/repository/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar:/home/hegemon/.m2/repository/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar:/home/hegemon/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/home/hegemon/.m2/repository/com/google/api/gax/1.66.0/gax-1.66.0.jar:/home/hegemon/.m2/repository/com/google/auth/google-auth-library-oauth2-http/0.26.0/google-auth-library-oauth2-http-0.26.0.jar:/home/hegemon/.m2/repository/com/google/http-client/google-http-client/1.39.2/google-http-client-1.39.2.jar:/home/hegemon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/hegemon/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/hegemon/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/hegemon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/hegemon/.m2/repository/io/opencensus/opencensus-contrib-http-util/0.28.0/opencensus-contrib-http-util-0.28.0.jar:/home/hegemon/.m2/repository/com/google/http-client/google-http-client-gson/1.39.2/google-http-client-gson-1.39.2.jar:/home/hegemon/.m2/repository/io/opencensus/opencensus-api/0.28.0/opencensus-api-0.28.0.jar:/home/hegemon/.m2/repository/com/google/api/gax-grpc/1.66.0/gax-grpc-1.66.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-auth/1.39.0/grpc-auth-1.39.0.jar:/home/hegemon/.m2/repository/com/google/auth/google-auth-library-credentials/0.26.0/google-auth-library-credentials-0.26.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-netty-shaded/1.39.0/grpc-netty-shaded-1.39.0.jar:/home/hegemon/.m2/repository/io/perfmark/perfmark-api/0.23.0/perfmark-api-0.23.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-core/1.39.0/grpc-core-1.39.0.jar:/home/hegemon/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/hegemon/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.20/animal-sniffer-annotations-1.20.jar:/home/hegemon/.m2/repository/io/grpc/grpc-alts/1.39.0/grpc-alts-1.39.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-grpclb/1.39.0/grpc-grpclb-1.39.0.jar:/home/hegemon/.m2/repository/com/google/protobuf/protobuf-java-util/3.17.3/protobuf-java-util-3.17.3.jar:/home/hegemon/.m2/repository/org/conscrypt/conscrypt-openjdk-uber/2.5.1/conscrypt-openjdk-uber-2.5.1.jar:/home/hegemon/.m2/repository/org/threeten/threetenbp/1.5.1/threetenbp-1.5.1.jar:/home/hegemon/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/hegemon/.m2/repository/org/scala-lang/scala-library/2.13.7/scala-library-2.13.7.jar:/home/hegemon/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/hegemon/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/hegemon/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/hegemon/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/hegemon/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.jar:/home/hegemon/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/home/hegemon/.m2/repository/com/vladmihalcea/hibernate-types-52/2.14.0/hibernate-types-52-2.14.0.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.11.0/jackson-module-jaxb-annotations-2.11.0.jar:/home/hegemon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/home/hegemon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/home/hegemon/.m2/repository/org/apache/logging/log4j/log4j-api/2.14.1/log4j-api-2.14.1.jar:/home/hegemon/.m2/repository/org/apache/logging/log4j/log4j-core/2.14.1/log4j-core-2.14.1.jar:/home/hegemon/.m2/repository/com/lmax/disruptor/3.4.4/disruptor-3.4.4.jar:/home/hegemon/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.14.1/log4j-slf4j-impl-2.14.1.jar:/home/hegemon/.m2/repository/org/apache/kafka/kafka-clients/2.8.0/kafka-clients-2.8.0.jar:/home/hegemon/.m2/repository/com/github/luben/zstd-jni/1.4.9-1/zstd-jni-1.4.9-1.jar:/home/hegemon/.m2/repository/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar:/home/hegemon/.m2/repository/org/xerial/snappy/snappy-java/1.1.8.1/snappy-java-1.1.8.1.jar:/home/hegemon/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/hegemon/.m2/repository/org/xerial/sqlite-jdbc/3.36.0.2/sqlite-jdbc-3.36.0.2.jar:/home/hegemon/.m2/repository/com/squareup/okhttp3/logging-interceptor/4.9.2/logging-interceptor-4.9.2.jar:/home/hegemon/.m2/repository/com/squareup/okhttp3/okhttp/4.9.2/okhttp-4.9.2.jar:/home/hegemon/.m2/repository/com/squareup/okio/okio/2.8.0/okio-2.8.0.jar:/home/hegemon/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/kotlin-stdlib-common-1.4.0.jar:/home/hegemon/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.jar:/home/hegemon/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/hegemon/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.4.10/kotlin-stdlib-jdk8-1.4.10.jar:/home/hegemon/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.4.10/kotlin-stdlib-jdk7-1.4.10.jar de.tu_berlin.dos.arm.archon.phoebe.Run
+[INFO ] 2022-03-13 23:09:00.491 [main] SequenceFSM - STATE-CHANGE: START -> DEPLOY
+[INFO ] 2022-03-13 23:11:11.433 [OkHttp https://130.149.248.64:6443/...] K8sClient - Namespace (twres) DELETED
+[INFO ] 2022-03-13 23:11:12.028 [OkHttp https://130.149.248.64:6443/...] K8sClient - Namespace (twres) ADDED
+[INFO ] 2022-03-13 23:11:12.029 [main] ClientsManager - Helm deploy: { zookeeper: { repo : https://charts.bitnami.com/bitnami },{ values : kubernetes/zookeeper/values.yaml } }
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - NAME: zookeeper
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - LAST DEPLOYED: Sun Mar 13 23:11:20 2022
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - NOTES:
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - CHART NAME: zookeeper
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - CHART VERSION: 8.1.1
+[INFO ] 2022-03-13 23:11:20.972 [pool-4-thread-1] Helm - APP VERSION: 3.7.0
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm - ** Please be patient while the chart is being deployed **
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm - ZooKeeper can be accessed via port 2181 on the following DNS name from within your cluster:
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -     zookeeper.twres.svc.cluster.local
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm - To connect to your ZooKeeper server run the following commands:
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -     export POD_NAME=$(kubectl get pods --namespace twres -l "app.kubernetes.io/name=zookeeper,app.kubernetes.io/instance=zookeeper,app.kubernetes.io/component=zookeeper" -o jsonpath="{.items[0].metadata.name}")
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -     kubectl exec -it $POD_NAME -- zkCli.sh
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm - To connect to your ZooKeeper server from outside the cluster execute the following commands:
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -     kubectl port-forward --namespace twres svc/zookeeper 2181: &
+[INFO ] 2022-03-13 23:11:20.973 [pool-4-thread-1] Helm -     zkCli.sh 127.0.0.1:2181
+[INFO ] 2022-03-13 23:11:20.978 [main] ClientsManager - Helm deploy: { kafka: { repo : https://charts.bitnami.com/bitnami },{ values : kubernetes/kafka/values.yaml } }
+[INFO ] 2022-03-13 23:11:31.031 [pool-5-thread-1] Helm - NAME: kafka
+[INFO ] 2022-03-13 23:11:31.031 [pool-5-thread-1] Helm - LAST DEPLOYED: Sun Mar 13 23:11:29 2022
+[INFO ] 2022-03-13 23:11:31.031 [pool-5-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-13 23:11:31.031 [pool-5-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-13 23:11:31.031 [pool-5-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-13 23:11:31.031 [pool-5-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-13 23:11:31.031 [pool-5-thread-1] Helm - NOTES:
+[INFO ] 2022-03-13 23:11:31.031 [pool-5-thread-1] Helm - CHART NAME: kafka
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm - CHART VERSION: 15.4.0
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm - APP VERSION: 3.1.0
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm - ** Please be patient while the chart is being deployed **
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm - Kafka can be accessed by consumers via port 9092 on the following DNS name from within your cluster:
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     kafka.twres.svc.cluster.local
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm - Each Kafka broker can be accessed by producers via port 9092 on the following DNS name(s) from within your cluster:
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     kafka-0.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     kafka-1.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     kafka-2.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     kafka-3.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     kafka-4.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm - To create a pod that you can use as a Kafka client run the following commands:
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     kubectl run kafka-client --restart='Never' --image docker.io/bitnami/kafka:3.0.0-debian-10-r97 --namespace twres --command -- sleep infinity
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     kubectl exec --tty -i kafka-client --namespace twres -- bash
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.032 [pool-5-thread-1] Helm -     PRODUCER:
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -         kafka-console-producer.sh \
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -             --broker-list kafka-0.kafka-headless.twres.svc.cluster.local:9092,kafka-1.kafka-headless.twres.svc.cluster.local:9092,kafka-2.kafka-headless.twres.svc.cluster.local:9092,kafka-3.kafka-headless.twres.svc.cluster.local:9092,kafka-4.kafka-headless.twres.svc.cluster.local:9092 \
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -             --topic test
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -     CONSUMER:
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -         kafka-console-consumer.sh \
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -             --bootstrap-server kafka.twres.svc.cluster.local:9092 \
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -             --topic test \
+[INFO ] 2022-03-13 23:11:31.033 [pool-5-thread-1] Helm -             --from-beginning
+[INFO ] 2022-03-13 23:11:31.037 [main] ClientsManager - Helm deploy: { prometheus: { repo : https://prometheus-community.github.io/helm-charts },{ values : kubernetes/prometheus/values.yaml } }
+[INFO ] 2022-03-13 23:11:36.094 [pool-6-thread-1] Helm - NAME: prometheus
+[INFO ] 2022-03-13 23:11:36.095 [pool-6-thread-1] Helm - LAST DEPLOYED: Sun Mar 13 23:11:35 2022
+[INFO ] 2022-03-13 23:11:36.095 [pool-6-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-13 23:11:36.095 [pool-6-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-13 23:11:36.095 [pool-6-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-13 23:11:36.095 [pool-6-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-13 23:11:36.095 [pool-6-thread-1] Helm - NOTES:
+[INFO ] 2022-03-13 23:11:36.096 [pool-6-thread-1] Helm - The Prometheus server can be accessed via port 80 on the following DNS name from within your cluster:
+[INFO ] 2022-03-13 23:11:36.096 [pool-6-thread-1] Helm - prometheus-server.twres.svc.cluster.local
+[INFO ] 2022-03-13 23:11:36.096 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:36.096 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:36.096 [pool-6-thread-1] Helm - Get the Prometheus server URL by running these commands in the same shell:
+[INFO ] 2022-03-13 23:11:36.096 [pool-6-thread-1] Helm -   export POD_NAME=$(kubectl get pods --namespace twres -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
+[INFO ] 2022-03-13 23:11:36.096 [pool-6-thread-1] Helm -   kubectl --namespace twres port-forward $POD_NAME 9090
+[INFO ] 2022-03-13 23:11:36.097 [pool-6-thread-1] Helm - #################################################################################
+[INFO ] 2022-03-13 23:11:36.097 [pool-6-thread-1] Helm - ######   WARNING: Persistence is disabled!!! You will lose your data when   #####
+[INFO ] 2022-03-13 23:11:36.097 [pool-6-thread-1] Helm - ######            the Server pod is terminated.                             #####
+[INFO ] 2022-03-13 23:11:36.097 [pool-6-thread-1] Helm - #################################################################################
+[INFO ] 2022-03-13 23:11:36.097 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:36.097 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:36.097 [pool-6-thread-1] Helm - #################################################################################
+[INFO ] 2022-03-13 23:11:36.098 [pool-6-thread-1] Helm - ######   WARNING: Pod Security Policy has been moved to a global property.  #####
+[INFO ] 2022-03-13 23:11:36.098 [pool-6-thread-1] Helm - ######            use .Values.podSecurityPolicy.enabled with pod-based      #####
+[INFO ] 2022-03-13 23:11:36.098 [pool-6-thread-1] Helm - ######            annotations                                               #####
+[INFO ] 2022-03-13 23:11:36.098 [pool-6-thread-1] Helm - ######            (e.g. .Values.nodeExporter.podSecurityPolicy.annotations) #####
+[INFO ] 2022-03-13 23:11:36.098 [pool-6-thread-1] Helm - #################################################################################
+[INFO ] 2022-03-13 23:11:36.098 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:36.099 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:36.099 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-13 23:11:36.099 [pool-6-thread-1] Helm - For more information on running Prometheus, visit:
+[INFO ] 2022-03-13 23:11:36.099 [pool-6-thread-1] Helm - https://prometheus.io/
+[INFO ] 2022-03-13 23:11:36.116 [main] ClientsManager - Helm deploy: { generators: { chart : kubernetes/generators } }
+[INFO ] 2022-03-13 23:11:37.739 [pool-7-thread-1] Helm - NAME: generators
+[INFO ] 2022-03-13 23:11:37.739 [pool-7-thread-1] Helm - LAST DEPLOYED: Sun Mar 13 23:11:36 2022
+[INFO ] 2022-03-13 23:11:37.739 [pool-7-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-13 23:11:37.739 [pool-7-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-13 23:11:37.739 [pool-7-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-13 23:11:37.739 [pool-7-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-13 23:11:37.742 [main] ClientsManager - Yaml deploy: { prometheus: { 1 : kubernetes/prometheus/cluster-role-binding.yaml },{ 2 : kubernetes/prometheus/prometheus-rest-service.yaml } }
+[INFO ] 2022-03-13 23:11:38.081 [main] ClientsManager - Yaml deploy: { flinkProactive: { 1 : kubernetes/flink/proactive/cluster-role-binding.yaml },{ 2 : kubernetes/flink/proactive/bootstrap-flink-native.yaml },{ 3 : kubernetes/flink/proactive/jobmanager-rest-service.yaml } }
+[INFO ] 2022-03-13 23:12:08.439 [main] SequenceFSM - Uploading JAR...
+[INFO ] 2022-03-13 23:14:25.365 [main] SequenceFSM - Jar uploaded with id: 68b102bb-3233-4d51-a4cc-b214dc997a2b_jobs-1.0.jar
+[INFO ] 2022-03-13 23:14:25.366 [main] SequenceFSM - STATE-CHANGE: DEPLOY -> MODEL
+[INFO ] 2022-03-13 23:14:25.500 [pool-2-thread-1] SequenceFSM - Training model, is still running: false
+[INFO ] 2022-03-13 23:14:26.500 [main] SequenceFSM - STATE-CHANGE: MODEL -> INITIALIZE
+[INFO ] 2022-03-13 23:14:26.501 [main] SequenceFSM - Start workload generation with configuration: {"brokerList":"kafka.twres.svc.cluster.local:9092","topic":"input","generatorType":"CARS","limiterType":"DATASET","limiterMaxNoise":0.0,"fileName":"datasets/cars_1D_1S_35K_small.csv"}
+[INFO ] 2022-03-13 23:14:30.293 [main] ClientsManager - Generator started with parameters: {"generatorType":"CARS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"DATASET","limiterMaxNoise":0.0,"amplitude":0,"period":3600,"verticalPhase":300000,"fileName":"datasets/cars_1D_1S_35K_small.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-13 23:14:32.853 [main] ClientsManager - Generator started with parameters: {"generatorType":"CARS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"DATASET","limiterMaxNoise":0.0,"amplitude":0,"period":3600,"verticalPhase":300000,"fileName":"datasets/cars_1D_1S_35K_small.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-13 23:14:35.368 [main] ClientsManager - Generator started with parameters: {"generatorType":"CARS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"DATASET","limiterMaxNoise":0.0,"amplitude":0,"period":3600,"verticalPhase":300000,"fileName":"datasets/cars_1D_1S_35K_small.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-13 23:14:37.871 [main] ClientsManager - Generator started with parameters: {"generatorType":"CARS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"DATASET","limiterMaxNoise":0.0,"amplitude":0,"period":3600,"verticalPhase":300000,"fileName":"datasets/cars_1D_1S_35K_small.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-13 23:14:40.329 [main] ClientsManager - Generator started with parameters: {"generatorType":"CARS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"DATASET","limiterMaxNoise":0.0,"amplitude":0,"period":3600,"verticalPhase":300000,"fileName":"datasets/cars_1D_1S_35K_small.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-13 23:14:44.017 [main] SequenceFSM - Started job with configuration: {"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":6,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-13 23:14:44.017 [main] SequenceFSM - STATE-CHANGE: INITIALIZE -> OPTIMIZE
+[INFO ] 2022-03-13 23:14:44.133 [main] SequenceFSM - 6, 1647209685
+[INFO ] 2022-03-13 23:14:44.134 [main] SequenceFSM - STATE-CHANGE: OPTIMIZE -> EXECUTE
+[INFO ] 2022-03-13 23:14:44.137 [main] SequenceFSM - [1200, 3943, 6686, 9429, 12172, 14915, 17658, 20401]
+[INFO ] 2022-03-13 23:15:44.166 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (61/600) has expired
+[INFO ] 2022-03-13 23:16:44.195 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (121/600) has expired
+[INFO ] 2022-03-13 23:17:44.211 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (181/600) has expired
+[INFO ] 2022-03-13 23:18:44.226 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (241/600) has expired
+[INFO ] 2022-03-13 23:19:44.254 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (301/600) has expired
+[INFO ] 2022-03-13 23:20:44.279 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (361/600) has expired
+[INFO ] 2022-03-13 23:21:44.294 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (421/600) has expired
+[INFO ] 2022-03-13 23:22:44.319 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (481/600) has expired
+[INFO ] 2022-03-13 23:23:44.343 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (541/600) has expired
+[INFO ] 2022-03-13 23:24:44.368 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (601/600) has expired
+[INFO ] 2022-03-13 23:24:44.375 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:6,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'1056eb2c28da1bc1d37ce76580a56855',isActive:true,tsList:[1647209684]}
+[INFO ] 2022-03-13 23:24:48.717 [pool-2-thread-1] SequenceFSM - Current scaleout: 6, Predicted scaleout: 1
+[INFO ] 2022-03-13 23:24:48.717 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 1
+[INFO ] 2022-03-13 23:24:48.740 [pool-2-thread-1] SequenceFSM - 6, 1647210289
+[INFO ] 2022-03-13 23:24:48.740 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-13 23:24:49.475 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-13 23:24:49.547 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":1,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-13 23:25:51.743 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-13 23:26:51.761 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-13 23:27:51.783 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-13 23:28:51.806 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-13 23:29:51.829 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-13 23:30:51.854 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-13 23:31:51.871 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-13 23:32:51.898 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-13 23:33:51.921 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-13 23:34:44.268 [pool-8-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-6
+[WARN ] 2022-03-13 23:34:44.295 [pool-8-thread-1] VersionUsageUtils - The client is using resource type 'networkchaos' with unstable version 'v1alpha1'
+[INFO ] 2022-03-13 23:34:51.945 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (7/600) has expired
+[INFO ] 2022-03-13 23:35:51.967 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (67/600) has expired
+[INFO ] 2022-03-13 23:36:51.991 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (127/600) has expired
+[INFO ] 2022-03-13 23:37:52.012 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (187/600) has expired
+[INFO ] 2022-03-13 23:38:52.030 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (248/600) has expired
+[INFO ] 2022-03-13 23:39:52.048 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (308/600) has expired
+[INFO ] 2022-03-13 23:40:52.067 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (368/600) has expired
+[INFO ] 2022-03-13 23:41:52.086 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (428/600) has expired
+[INFO ] 2022-03-13 23:42:52.111 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (488/600) has expired
+[INFO ] 2022-03-13 23:43:52.130 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (548/600) has expired
+[INFO ] 2022-03-13 23:44:52.146 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (608/600) has expired
+[INFO ] 2022-03-13 23:44:52.146 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:1,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'6ff5d27d91dbcd125841535f33a2c37f',isActive:true,tsList:[1647209684,1647210292,1647210885]}
+[INFO ] 2022-03-13 23:44:56.353 [pool-2-thread-1] SequenceFSM - Current scaleout: 1, Predicted scaleout: 2
+[INFO ] 2022-03-13 23:44:56.353 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 2
+[INFO ] 2022-03-13 23:44:56.376 [pool-2-thread-1] SequenceFSM - 1, 1647211497
+[INFO ] 2022-03-13 23:44:56.376 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-13 23:45:01.555 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-13 23:45:01.613 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":2,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-13 23:46:02.953 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-13 23:47:02.972 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-13 23:48:02.995 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-13 23:49:03.019 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-13 23:50:03.043 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (301/600) has expired
+[INFO ] 2022-03-13 23:51:03.061 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (361/600) has expired
+[INFO ] 2022-03-13 23:52:03.092 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (421/600) has expired
+[INFO ] 2022-03-13 23:53:03.115 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (481/600) has expired
+[INFO ] 2022-03-13 23:54:03.134 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (541/600) has expired
+[INFO ] 2022-03-13 23:55:03.156 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (601/600) has expired
+[INFO ] 2022-03-13 23:55:03.157 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:2,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'9f26deb85a646071a894677c1806a4fb',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503]}
+[INFO ] 2022-03-13 23:55:06.958 [pool-2-thread-1] SequenceFSM - Current scaleout: 2, Predicted scaleout: 3
+[INFO ] 2022-03-13 23:55:06.958 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 3
+[INFO ] 2022-03-13 23:55:06.981 [pool-2-thread-1] SequenceFSM - 2, 1647212107
+[INFO ] 2022-03-13 23:55:06.981 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-13 23:55:10.604 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-13 23:55:10.663 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":3,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-13 23:56:15.755 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-13 23:57:15.779 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (124/600) has expired
+[INFO ] 2022-03-13 23:58:15.804 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (184/600) has expired
+[INFO ] 2022-03-13 23:59:15.833 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (244/600) has expired
+[INFO ] 2022-03-14 00:00:15.854 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (304/600) has expired
+[INFO ] 2022-03-14 00:01:15.876 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (364/600) has expired
+[INFO ] 2022-03-14 00:02:15.895 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (424/600) has expired
+[INFO ] 2022-03-14 00:03:15.916 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (484/600) has expired
+[INFO ] 2022-03-14 00:04:15.937 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (544/600) has expired
+[INFO ] 2022-03-14 00:05:15.959 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (604/600) has expired
+[INFO ] 2022-03-14 00:05:15.960 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:3,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'c01d2a47e3325671e716e9433c50ff55',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112]}
+[INFO ] 2022-03-14 00:05:19.792 [pool-2-thread-1] SequenceFSM - Current scaleout: 3, Predicted scaleout: 4
+[INFO ] 2022-03-14 00:05:19.792 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 4
+[INFO ] 2022-03-14 00:05:19.814 [pool-2-thread-1] SequenceFSM - 3, 1647212720
+[INFO ] 2022-03-14 00:05:19.814 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 00:05:23.964 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 00:05:24.028 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":4,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 00:06:25.379 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 00:07:25.455 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 00:08:25.487 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 00:09:25.557 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 00:10:25.577 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 00:11:25.592 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 00:12:25.608 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 00:13:25.628 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 00:14:25.647 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 00:15:25.665 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 00:15:25.665 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:4,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'98e40bb2f3d7d2b3b09f3df7291e61c6',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726]}
+[INFO ] 2022-03-14 00:15:29.413 [pool-2-thread-1] SequenceFSM - Current scaleout: 4, Predicted scaleout: 5
+[INFO ] 2022-03-14 00:15:29.413 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 5
+[INFO ] 2022-03-14 00:15:29.435 [pool-2-thread-1] SequenceFSM - 4, 1647213330
+[INFO ] 2022-03-14 00:15:29.435 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 00:15:35.068 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 00:15:35.136 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":5,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 00:16:36.450 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 00:17:36.523 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 00:18:36.544 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 00:19:36.566 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 00:20:27.413 [pool-8-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-8
+[INFO ] 2022-03-14 00:20:36.589 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (9/600) has expired
+[INFO ] 2022-03-14 00:21:36.612 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (69/600) has expired
+[INFO ] 2022-03-14 00:22:36.632 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (129/600) has expired
+[INFO ] 2022-03-14 00:23:36.653 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (189/600) has expired
+[INFO ] 2022-03-14 00:24:36.676 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (249/600) has expired
+[INFO ] 2022-03-14 00:25:36.698 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (309/600) has expired
+[INFO ] 2022-03-14 00:26:36.720 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (369/600) has expired
+[INFO ] 2022-03-14 00:27:36.741 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (429/600) has expired
+[INFO ] 2022-03-14 00:28:36.764 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (489/600) has expired
+[INFO ] 2022-03-14 00:29:36.784 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (549/600) has expired
+[INFO ] 2022-03-14 00:30:40.686 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (609/600) has expired
+[INFO ] 2022-03-14 00:30:40.686 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:5,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'cc62054c09ac6add4b6bbccdab36d495',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628]}
+[INFO ] 2022-03-14 00:30:44.880 [pool-2-thread-1] SequenceFSM - Current scaleout: 5, Predicted scaleout: 6
+[INFO ] 2022-03-14 00:30:44.881 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 6
+[INFO ] 2022-03-14 00:30:44.896 [pool-2-thread-1] SequenceFSM - 5, 1647214245
+[INFO ] 2022-03-14 00:30:44.896 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 00:30:50.080 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 00:30:50.143 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":6,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 00:31:51.467 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 00:32:51.487 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 00:33:51.509 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 00:34:51.532 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 00:35:51.550 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 00:36:51.572 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 00:37:51.590 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 00:38:51.612 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 00:39:51.632 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 00:40:51.655 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 00:40:51.655 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:6,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'82bd421eb499b7b80f741c5ad365eb72',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252]}
+[INFO ] 2022-03-14 00:40:55.595 [pool-2-thread-1] SequenceFSM - Current scaleout: 6, Predicted scaleout: 7
+[INFO ] 2022-03-14 00:40:55.595 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 7
+[INFO ] 2022-03-14 00:40:55.616 [pool-2-thread-1] SequenceFSM - 6, 1647214856
+[INFO ] 2022-03-14 00:40:55.616 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 00:41:01.842 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 00:41:01.903 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":7,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 00:42:03.152 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 00:43:03.227 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 00:44:03.255 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 00:45:03.325 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 00:46:03.347 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 00:47:03.363 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 00:48:03.385 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 00:49:03.406 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 00:50:03.432 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 00:51:03.456 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 00:51:03.456 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:7,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'583d17f24e5307422e50b5467ade1c52',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864]}
+[INFO ] 2022-03-14 00:51:07.892 [pool-2-thread-1] SequenceFSM - Current scaleout: 7, Predicted scaleout: 4
+[INFO ] 2022-03-14 00:51:07.892 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 8
+[INFO ] 2022-03-14 00:51:07.912 [pool-2-thread-1] SequenceFSM - 7, 1647215468
+[INFO ] 2022-03-14 00:51:07.913 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 00:51:12.369 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 00:51:12.431 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":4,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 00:52:13.745 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 00:53:13.813 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 00:54:13.835 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 00:55:13.856 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 00:56:13.878 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 00:57:13.900 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 00:58:13.921 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 00:59:13.943 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 01:00:13.967 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 01:01:13.990 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 01:01:13.990 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:4,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'dc2ccb86969aee7b7cb4b6c4920ad809',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474]}
+[INFO ] 2022-03-14 01:01:17.976 [pool-2-thread-1] SequenceFSM - Current scaleout: 4, Predicted scaleout: 7
+[INFO ] 2022-03-14 01:01:17.977 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 9
+[INFO ] 2022-03-14 01:01:17.998 [pool-2-thread-1] SequenceFSM - 4, 1647216078
+[INFO ] 2022-03-14 01:01:17.998 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 01:01:27.970 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 01:01:28.031 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":7,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 01:02:29.143 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 01:03:29.213 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 01:04:29.243 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 01:05:29.274 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 01:06:10.390 [pool-8-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-12
+[INFO ] 2022-03-14 01:06:29.299 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (19/600) has expired
+[INFO ] 2022-03-14 01:07:29.321 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (79/600) has expired
+[INFO ] 2022-03-14 01:08:29.342 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (139/600) has expired
+[INFO ] 2022-03-14 01:09:29.361 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (199/600) has expired
+[INFO ] 2022-03-14 01:10:29.386 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (259/600) has expired
+[INFO ] 2022-03-14 01:11:29.406 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (319/600) has expired
+[INFO ] 2022-03-14 01:12:29.423 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (379/600) has expired
+[INFO ] 2022-03-14 01:13:29.443 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (439/600) has expired
+[INFO ] 2022-03-14 01:14:29.465 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (499/600) has expired
+[INFO ] 2022-03-14 01:15:29.485 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (559/600) has expired
+[INFO ] 2022-03-14 01:16:29.500 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (619/600) has expired
+[INFO ] 2022-03-14 01:16:29.500 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:7,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'e0b405a51ed51b8c6792fd09d04c09eb',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371]}
+[INFO ] 2022-03-14 01:16:33.711 [pool-2-thread-1] SequenceFSM - Current scaleout: 7, Predicted scaleout: 8
+[INFO ] 2022-03-14 01:16:33.711 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 10
+[INFO ] 2022-03-14 01:16:33.732 [pool-2-thread-1] SequenceFSM - 7, 1647216994
+[INFO ] 2022-03-14 01:16:33.732 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 01:16:42.133 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 01:16:42.195 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":8,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 01:17:43.782 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 01:18:43.857 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 01:19:43.888 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 01:20:43.917 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 01:21:43.941 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 01:22:43.965 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 01:23:47.763 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 01:24:47.783 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (484/600) has expired
+[INFO ] 2022-03-14 01:25:47.800 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (544/600) has expired
+[INFO ] 2022-03-14 01:26:47.816 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (604/600) has expired
+[INFO ] 2022-03-14 01:26:47.816 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:8,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'61c9020149d2e122eac4e0315484402e',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004]}
+[INFO ] 2022-03-14 01:26:51.852 [pool-2-thread-1] SequenceFSM - Current scaleout: 8, Predicted scaleout: 9
+[INFO ] 2022-03-14 01:26:51.852 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 11
+[INFO ] 2022-03-14 01:26:51.872 [pool-2-thread-1] SequenceFSM - 8, 1647217612
+[INFO ] 2022-03-14 01:26:51.872 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 01:27:00.172 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 01:27:00.238 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":9,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 01:28:01.393 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 01:29:01.464 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 01:30:01.494 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 01:31:01.522 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 01:32:01.541 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 01:33:01.562 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 01:34:01.582 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 01:35:01.602 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 01:36:01.618 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 01:37:01.635 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 01:37:01.635 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:9,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'e2497ffe3d72860e4281bde782718a58',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622]}
+[INFO ] 2022-03-14 01:37:05.768 [pool-2-thread-1] SequenceFSM - Current scaleout: 9, Predicted scaleout: 10
+[INFO ] 2022-03-14 01:37:05.768 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 12
+[INFO ] 2022-03-14 01:37:05.788 [pool-2-thread-1] SequenceFSM - 9, 1647218226
+[INFO ] 2022-03-14 01:37:05.789 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 01:37:14.402 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 01:37:14.465 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":10,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 01:38:15.559 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 01:39:15.632 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 01:40:15.663 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 01:41:15.691 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 01:42:15.713 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 01:43:15.733 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 01:44:15.796 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 01:45:15.818 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 01:46:15.840 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 01:47:15.859 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 01:47:15.860 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:10,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'d72febe9dcfaff8b90b01535aea0d98b',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236]}
+[INFO ] 2022-03-14 01:47:19.975 [pool-2-thread-1] SequenceFSM - Current scaleout: 10, Predicted scaleout: 11
+[INFO ] 2022-03-14 01:47:19.975 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 13
+[INFO ] 2022-03-14 01:47:19.995 [pool-2-thread-1] SequenceFSM - 10, 1647218840
+[INFO ] 2022-03-14 01:47:19.995 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 01:47:30.259 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 01:47:30.321 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":11,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 01:48:31.440 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 01:49:31.458 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 01:50:31.477 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 01:51:31.499 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 01:51:53.384 [pool-8-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-23
+[INFO ] 2022-03-14 01:52:31.517 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (38/600) has expired
+[INFO ] 2022-03-14 01:53:31.537 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (98/600) has expired
+[INFO ] 2022-03-14 01:54:31.559 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (158/600) has expired
+[INFO ] 2022-03-14 01:55:31.580 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (218/600) has expired
+[INFO ] 2022-03-14 01:56:31.600 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (278/600) has expired
+[INFO ] 2022-03-14 01:57:31.620 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (338/600) has expired
+[INFO ] 2022-03-14 01:58:31.642 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (398/600) has expired
+[INFO ] 2022-03-14 01:59:31.661 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (458/600) has expired
+[INFO ] 2022-03-14 02:00:31.679 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (518/600) has expired
+[INFO ] 2022-03-14 02:01:31.699 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (578/600) has expired
+[INFO ] 2022-03-14 02:02:31.721 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (638/600) has expired
+[INFO ] 2022-03-14 02:02:31.721 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:11,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'f927d140cafb16ed75799ff3c1d6251f',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114]}
+[INFO ] 2022-03-14 02:02:36.401 [pool-2-thread-1] SequenceFSM - Current scaleout: 11, Predicted scaleout: 3
+[INFO ] 2022-03-14 02:02:36.401 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 14
+[INFO ] 2022-03-14 02:02:36.421 [pool-2-thread-1] SequenceFSM - 11, 1647219757
+[INFO ] 2022-03-14 02:02:36.421 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:02:45.037 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 02:02:45.101 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":3,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 02:03:46.253 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 02:04:46.272 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 02:05:46.292 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 02:06:46.311 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 02:07:46.333 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 02:08:46.352 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 02:09:50.083 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 02:10:50.104 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (484/600) has expired
+[INFO ] 2022-03-14 02:11:50.120 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (544/600) has expired
+[INFO ] 2022-03-14 02:12:50.136 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (604/600) has expired
+[INFO ] 2022-03-14 02:12:50.136 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:3,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'a4508f7332a45069505e10ddfd0d817c',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767]}
+[INFO ] 2022-03-14 02:12:54.455 [pool-2-thread-1] SequenceFSM - Current scaleout: 3, Predicted scaleout: 4
+[INFO ] 2022-03-14 02:12:54.455 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 15
+[INFO ] 2022-03-14 02:12:54.475 [pool-2-thread-1] SequenceFSM - 3, 1647220375
+[INFO ] 2022-03-14 02:12:54.475 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:13:25.859 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 02:13:25.918 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":4,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 02:14:27.127 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 02:15:27.146 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 02:16:27.169 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 02:17:27.194 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 02:18:27.215 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 02:19:27.236 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 02:20:27.253 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 02:21:27.269 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 02:22:27.287 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 02:23:27.309 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 02:23:27.309 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:4,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'f4afa69b8ba28e03f26161951f638bce',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408]}
+[INFO ] 2022-03-14 02:23:31.500 [pool-2-thread-1] SequenceFSM - Current scaleout: 4, Predicted scaleout: 5
+[INFO ] 2022-03-14 02:23:31.500 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 16
+[INFO ] 2022-03-14 02:23:31.519 [pool-2-thread-1] SequenceFSM - 4, 1647221012
+[INFO ] 2022-03-14 02:23:31.519 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:31.846 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:32.448 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:32.684 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:32.909 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:33.071 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:33.238 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:33.398 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:33.560 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:33.777 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:33.983 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:34.181 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:34.390 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:34.620 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:34.844 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:35.060 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:35.282 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:35.518 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:35.755 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:35.985 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:36.227 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:36.450 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:36.686 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:36.918 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:37.142 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:37.314 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:37.474 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:37.695 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:37.937 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:38.175 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:38.398 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:38.614 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:38.825 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:39.046 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:39.279 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:39.488 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:39.716 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:39.953 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:40.190 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:40.418 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:40.637 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:40.846 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:41.055 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:41.217 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:41.379 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:41.532 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:41.746 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:41.957 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:42.178 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:42.419 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:42.657 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:42.883 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:43.102 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:43.309 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:43.519 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:43.749 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:43.966 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:44.201 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:44.429 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:44.644 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:44.803 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:25:44.925 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-14 02:26:44.945 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (797/600) has expired
+[INFO ] 2022-03-14 02:26:44.945 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:4,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'f4afa69b8ba28e03f26161951f638bce',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408]}
+[INFO ] 2022-03-14 02:26:48.984 [pool-2-thread-1] SequenceFSM - Current scaleout: 4, Predicted scaleout: 5
+[INFO ] 2022-03-14 02:26:48.984 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 17
+[INFO ] 2022-03-14 02:26:49.004 [pool-2-thread-1] SequenceFSM - 4, 1647221209
+[INFO ] 2022-03-14 02:26:49.004 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:27:21.770 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 02:27:21.831 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":5,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 02:28:23.325 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 02:29:23.344 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 02:30:23.365 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 02:31:23.384 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 02:32:23.405 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 02:33:23.423 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 02:34:23.444 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 02:35:23.461 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 02:36:23.482 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 02:37:23.502 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 02:37:23.502 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:5,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'54efded59b79df69a1bcb0ff4dbf2675',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244]}
+[INFO ] 2022-03-14 02:37:27.558 [pool-2-thread-1] SequenceFSM - Current scaleout: 5, Predicted scaleout: 6
+[INFO ] 2022-03-14 02:37:27.558 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 18
+[INFO ] 2022-03-14 02:37:27.576 [pool-2-thread-1] SequenceFSM - 5, 1647221848
+[INFO ] 2022-03-14 02:37:27.576 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:37:36.357 [pool-8-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-22
+[INFO ] 2022-03-14 02:38:24.346 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:24.586 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:24.809 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:25.059 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:25.296 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:25.522 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:25.689 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:25.931 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:26.171 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:26.408 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:26.630 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:26.842 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:27.048 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:27.272 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:27.510 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:27.743 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:27.973 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:28.189 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:28.414 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:28.640 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:28.861 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:29.083 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:29.292 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:29.500 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:29.726 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:29.953 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:30.164 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:30.386 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:30.625 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:30.874 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:31.137 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:31.414 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:31.663 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:31.907 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:32.080 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:32.245 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:32.408 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:32.569 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:32.780 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:32.989 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:33.190 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:33.382 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:33.581 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:33.773 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:33.986 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:34.198 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:34.407 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:34.617 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:34.829 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:35.042 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:35.248 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:35.475 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:35.713 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:35.985 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:36.225 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:36.451 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:36.620 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:36.829 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:37.038 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:37.263 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:38:37.404 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-14 02:39:37.426 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (121/600) has expired
+[INFO ] 2022-03-14 02:40:37.446 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (181/600) has expired
+[INFO ] 2022-03-14 02:41:37.467 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (241/600) has expired
+[INFO ] 2022-03-14 02:42:37.488 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (301/600) has expired
+[INFO ] 2022-03-14 02:43:37.510 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (361/600) has expired
+[INFO ] 2022-03-14 02:44:37.532 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (421/600) has expired
+[INFO ] 2022-03-14 02:45:37.550 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (481/600) has expired
+[INFO ] 2022-03-14 02:46:37.571 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (541/600) has expired
+[INFO ] 2022-03-14 02:47:37.591 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (601/600) has expired
+[INFO ] 2022-03-14 02:47:37.591 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:5,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'54efded59b79df69a1bcb0ff4dbf2675',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857]}
+[INFO ] 2022-03-14 02:47:41.670 [pool-2-thread-1] SequenceFSM - Current scaleout: 5, Predicted scaleout: 6
+[INFO ] 2022-03-14 02:47:41.670 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 19
+[INFO ] 2022-03-14 02:47:41.689 [pool-2-thread-1] SequenceFSM - 5, 1647222462
+[INFO ] 2022-03-14 02:47:41.689 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:13.667 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:13.907 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:14.161 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:14.397 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:14.621 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:14.864 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:15.089 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:15.315 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:15.529 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:15.738 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:15.960 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:16.183 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:16.421 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:16.651 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:16.877 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:17.037 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:17.261 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:17.513 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:17.757 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:17.983 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:18.206 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:18.413 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:18.637 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:18.878 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:19.110 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:19.336 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:19.495 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:19.719 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:19.960 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:20.191 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:20.427 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:20.684 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:20.921 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:21.144 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:21.359 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:21.566 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:21.790 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:22.010 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:22.218 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:22.439 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:22.690 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:22.926 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:23.154 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:23.375 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:23.582 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:23.806 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:24.058 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:24.294 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:24.517 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:24.689 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:24.845 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:25.003 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:25.233 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:25.458 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:25.666 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:25.887 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:26.135 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:26.368 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:26.585 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:26.756 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:49:26.864 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-14 02:50:26.884 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (770/600) has expired
+[INFO ] 2022-03-14 02:50:26.885 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:5,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'54efded59b79df69a1bcb0ff4dbf2675',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857]}
+[INFO ] 2022-03-14 02:50:30.931 [pool-2-thread-1] SequenceFSM - Current scaleout: 5, Predicted scaleout: 6
+[INFO ] 2022-03-14 02:50:30.931 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 20
+[INFO ] 2022-03-14 02:50:30.950 [pool-2-thread-1] SequenceFSM - 5, 1647222631
+[INFO ] 2022-03-14 02:50:30.951 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 02:51:01.095 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 02:51:01.157 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":6,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 02:52:02.535 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 02:53:02.554 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 02:54:02.574 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 02:55:02.593 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 02:56:02.613 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 02:57:02.639 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 02:58:02.658 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 02:59:02.679 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 03:00:02.701 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 03:01:02.730 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 03:01:02.730 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:6,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'294a7c1790592e78bd9654407965ea6b',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663]}
+[INFO ] 2022-03-14 03:01:07.116 [pool-2-thread-1] SequenceFSM - Current scaleout: 6, Predicted scaleout: 7
+[INFO ] 2022-03-14 03:01:07.116 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 21
+[INFO ] 2022-03-14 03:01:07.145 [pool-2-thread-1] SequenceFSM - 6, 1647223268
+[INFO ] 2022-03-14 03:01:07.145 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 03:01:25.386 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 03:01:25.456 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":7,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 03:02:26.556 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 03:03:26.579 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 03:04:26.598 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 03:05:26.620 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 03:06:26.643 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 03:07:26.662 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 03:08:26.683 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 03:09:26.704 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 03:10:26.723 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 03:11:26.741 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 03:11:26.741 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:7,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'e7ac7860d33526555090a96d75504ab2',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287]}
+[INFO ] 2022-03-14 03:11:31.091 [pool-2-thread-1] SequenceFSM - Current scaleout: 7, Predicted scaleout: 8
+[INFO ] 2022-03-14 03:11:31.091 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 22
+[INFO ] 2022-03-14 03:11:31.112 [pool-2-thread-1] SequenceFSM - 7, 1647223892
+[INFO ] 2022-03-14 03:11:31.112 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 03:11:47.333 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 03:11:47.394 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":8,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 03:12:48.449 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 03:13:48.468 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 03:14:48.490 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 03:15:48.512 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 03:16:48.531 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 03:17:48.557 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 03:18:48.580 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 03:19:48.601 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 03:20:48.623 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 03:21:48.641 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 03:21:48.641 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:8,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'573af959ec8ee2d603dd3247434b3178',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909]}
+[INFO ] 2022-03-14 03:21:52.847 [pool-2-thread-1] SequenceFSM - Current scaleout: 8, Predicted scaleout: 9
+[INFO ] 2022-03-14 03:21:52.847 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 23
+[INFO ] 2022-03-14 03:21:52.867 [pool-2-thread-1] SequenceFSM - 8, 1647224513
+[INFO ] 2022-03-14 03:21:52.867 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 03:22:08.817 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 03:22:08.877 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":9,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 03:23:10.037 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 03:23:19.386 [pool-8-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-34
+[INFO ] 2022-03-14 03:24:10.058 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (51/600) has expired
+[INFO ] 2022-03-14 03:25:10.078 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (111/600) has expired
+[INFO ] 2022-03-14 03:26:10.099 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (171/600) has expired
+[INFO ] 2022-03-14 03:27:10.120 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (231/600) has expired
+[INFO ] 2022-03-14 03:28:10.140 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (291/600) has expired
+[INFO ] 2022-03-14 03:29:10.160 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (351/600) has expired
+[INFO ] 2022-03-14 03:30:10.180 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (411/600) has expired
+[INFO ] 2022-03-14 03:31:10.201 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (471/600) has expired
+[INFO ] 2022-03-14 03:32:10.219 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (531/600) has expired
+[INFO ] 2022-03-14 03:33:10.240 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (591/600) has expired
+[INFO ] 2022-03-14 03:34:10.261 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (651/600) has expired
+[INFO ] 2022-03-14 03:34:10.262 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:9,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'89af663a3f0663b69b92e0126e23d366',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600]}
+[INFO ] 2022-03-14 03:34:14.650 [pool-2-thread-1] SequenceFSM - Current scaleout: 9, Predicted scaleout: 10
+[INFO ] 2022-03-14 03:34:14.650 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 24
+[INFO ] 2022-03-14 03:34:14.669 [pool-2-thread-1] SequenceFSM - 9, 1647225255
+[INFO ] 2022-03-14 03:34:14.669 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 03:34:31.047 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 03:34:31.109 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":10,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 03:35:32.229 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 03:36:32.296 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 03:37:32.320 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 03:38:32.341 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 03:39:32.361 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 03:40:32.379 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 03:41:32.397 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 03:42:32.418 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 03:43:32.437 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 03:44:32.458 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 03:44:32.458 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:10,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'cc87f93b4fb2f553a723879d79aa2af0',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273]}
+[INFO ] 2022-03-14 03:44:37.114 [pool-2-thread-1] SequenceFSM - Current scaleout: 10, Predicted scaleout: 11
+[INFO ] 2022-03-14 03:44:37.114 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 25
+[INFO ] 2022-03-14 03:44:37.136 [pool-2-thread-1] SequenceFSM - 10, 1647225878
+[INFO ] 2022-03-14 03:44:37.136 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 03:44:55.362 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 03:44:55.424 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":11,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 03:45:56.468 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 03:46:56.540 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 03:47:56.568 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 03:48:56.595 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 03:49:56.616 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 03:50:56.636 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 03:51:56.653 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 03:52:56.671 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 03:53:58.491 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 03:54:58.512 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (602/600) has expired
+[INFO ] 2022-03-14 03:54:58.512 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:11,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'517432f0be7993dad4e6010100d673e3',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273,1647225897]}
+[INFO ] 2022-03-14 03:55:03.292 [pool-2-thread-1] SequenceFSM - Current scaleout: 11, Predicted scaleout: 12
+[INFO ] 2022-03-14 03:55:03.292 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 26
+[INFO ] 2022-03-14 03:55:03.313 [pool-2-thread-1] SequenceFSM - 11, 1647226504
+[INFO ] 2022-03-14 03:55:03.313 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 03:55:19.165 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 03:55:19.234 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":12,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 03:56:20.436 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 03:57:20.511 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 03:58:20.542 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 03:59:20.613 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 04:00:20.633 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 04:01:20.650 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 04:02:20.668 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 04:03:20.689 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 04:04:20.709 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 04:05:20.730 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 04:05:20.730 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:12,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'846ba0ab679bee1931a4c96476bc5964',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273,1647225897,1647226521]}
+[INFO ] 2022-03-14 04:05:26.445 [pool-2-thread-1] SequenceFSM - Current scaleout: 12, Predicted scaleout: 13
+[INFO ] 2022-03-14 04:05:26.445 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 27
+[INFO ] 2022-03-14 04:05:26.464 [pool-2-thread-1] SequenceFSM - 12, 1647227127
+[INFO ] 2022-03-14 04:05:26.464 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 04:05:43.479 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 04:05:43.541 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":13,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 04:06:44.741 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 04:07:44.813 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 04:08:44.840 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 04:09:02.476 [pool-8-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-67
+[INFO ] 2022-03-14 04:09:44.861 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (42/600) has expired
+[INFO ] 2022-03-14 04:10:44.880 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (102/600) has expired
+[INFO ] 2022-03-14 04:11:44.899 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (162/600) has expired
+[INFO ] 2022-03-14 04:12:44.917 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (222/600) has expired
+[INFO ] 2022-03-14 04:13:44.936 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (282/600) has expired
+[INFO ] 2022-03-14 04:14:44.957 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (342/600) has expired
+[INFO ] 2022-03-14 04:15:44.976 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (402/600) has expired
+[INFO ] 2022-03-14 04:16:44.997 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (462/600) has expired
+[INFO ] 2022-03-14 04:17:45.016 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (523/600) has expired
+[INFO ] 2022-03-14 04:18:45.033 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (583/600) has expired
+[INFO ] 2022-03-14 04:19:45.049 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (643/600) has expired
+[INFO ] 2022-03-14 04:19:45.049 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'d9658a8b66cf180d95015087e779b2d7',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273,1647225897,1647226521,1647227145,1647227343]}
+[INFO ] 2022-03-14 04:19:50.263 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-14 04:19:50.263 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 28
+[INFO ] 2022-03-14 04:19:50.281 [pool-2-thread-1] SequenceFSM - 13, 1647227991
+[INFO ] 2022-03-14 04:19:50.281 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 04:20:14.723 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 04:20:14.785 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":14,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 04:21:15.867 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 04:22:15.937 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 04:23:15.964 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 04:24:16.032 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 04:25:16.051 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (301/600) has expired
+[INFO ] 2022-03-14 04:26:16.072 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (361/600) has expired
+[INFO ] 2022-03-14 04:27:16.089 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (421/600) has expired
+[INFO ] 2022-03-14 04:28:16.104 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (481/600) has expired
+[INFO ] 2022-03-14 04:29:16.125 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (541/600) has expired
+[INFO ] 2022-03-14 04:30:16.164 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (601/600) has expired
+[INFO ] 2022-03-14 04:30:16.164 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:14,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'8deebd5cad5b4267a0be2be4902fb90e',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273,1647225897,1647226521,1647227145,1647227343,1647228016]}
+[INFO ] 2022-03-14 04:30:20.276 [pool-2-thread-1] SequenceFSM - Current scaleout: 14, Predicted scaleout: 15
+[INFO ] 2022-03-14 04:30:20.276 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 29
+[INFO ] 2022-03-14 04:30:20.296 [pool-2-thread-1] SequenceFSM - 14, 1647228621
+[INFO ] 2022-03-14 04:30:20.296 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 04:30:39.940 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 04:30:40.003 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":15,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 04:31:41.244 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 04:32:41.312 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 04:33:41.333 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 04:34:41.354 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 04:35:41.372 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 04:36:41.393 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 04:37:41.413 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 04:38:41.434 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 04:39:41.498 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 04:40:41.519 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-14 04:40:41.519 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:15,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'45a26382bcf93af0486227a41a9d223f',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273,1647225897,1647226521,1647227145,1647227343,1647228016,1647228642]}
+[INFO ] 2022-03-14 04:40:45.779 [pool-2-thread-1] SequenceFSM - Current scaleout: 15, Predicted scaleout: 16
+[INFO ] 2022-03-14 04:40:45.780 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 30
+[INFO ] 2022-03-14 04:40:45.799 [pool-2-thread-1] SequenceFSM - 15, 1647229246
+[INFO ] 2022-03-14 04:40:45.800 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 04:41:17.623 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 04:41:17.689 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":16,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 04:42:19.040 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (61/600) has expired
+[INFO ] 2022-03-14 04:43:19.119 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (121/600) has expired
+[INFO ] 2022-03-14 04:44:19.147 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (181/600) has expired
+[INFO ] 2022-03-14 04:45:19.223 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (241/600) has expired
+[INFO ] 2022-03-14 04:46:19.249 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (301/600) has expired
+[INFO ] 2022-03-14 04:47:19.275 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (361/600) has expired
+[INFO ] 2022-03-14 04:48:19.295 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (421/600) has expired
+[INFO ] 2022-03-14 04:49:19.320 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (481/600) has expired
+[INFO ] 2022-03-14 04:50:19.336 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (541/600) has expired
+[INFO ] 2022-03-14 04:51:19.356 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (601/600) has expired
+[INFO ] 2022-03-14 04:51:19.356 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:16,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'c8bf161138155f74f4c9749bd560b061',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273,1647225897,1647226521,1647227145,1647227343,1647228016,1647228642,1647229279]}
+[INFO ] 2022-03-14 04:51:23.647 [pool-2-thread-1] SequenceFSM - Current scaleout: 16, Predicted scaleout: 17
+[INFO ] 2022-03-14 04:51:23.647 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 31
+[INFO ] 2022-03-14 04:51:23.670 [pool-2-thread-1] SequenceFSM - 16, 1647229884
+[INFO ] 2022-03-14 04:51:23.670 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 04:51:49.192 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 04:51:49.257 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":17,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 04:52:50.507 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 04:53:50.577 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 04:54:45.458 [pool-8-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-44
+[INFO ] 2022-03-14 04:54:50.596 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (5/600) has expired
+[INFO ] 2022-03-14 04:55:50.615 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (65/600) has expired
+[INFO ] 2022-03-14 04:56:50.633 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (125/600) has expired
+[INFO ] 2022-03-14 04:57:50.653 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (185/600) has expired
+[INFO ] 2022-03-14 04:58:50.670 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (245/600) has expired
+[INFO ] 2022-03-14 04:59:50.688 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (305/600) has expired
+[INFO ] 2022-03-14 05:00:50.709 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (365/600) has expired
+[INFO ] 2022-03-14 05:01:50.726 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (425/600) has expired
+[INFO ] 2022-03-14 05:02:50.744 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (485/600) has expired
+[INFO ] 2022-03-14 05:03:50.765 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (545/600) has expired
+[INFO ] 2022-03-14 05:04:50.785 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (605/600) has expired
+[INFO ] 2022-03-14 05:04:50.786 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:17,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'adae1dc85e86f9a3934a17d1b74f96e5',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273,1647225897,1647226521,1647227145,1647227343,1647228016,1647228642,1647229279,1647229911,1647230086]}
+[INFO ] 2022-03-14 05:04:55.012 [pool-2-thread-1] SequenceFSM - Current scaleout: 17, Predicted scaleout: 18
+[INFO ] 2022-03-14 05:04:55.013 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 32
+[INFO ] 2022-03-14 05:04:55.032 [pool-2-thread-1] SequenceFSM - 17, 1647230696
+[INFO ] 2022-03-14 05:04:55.032 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-14 05:05:05.792 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-14 05:05:05.857 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres"],"parallelism":18,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.TopSpeedWindowing"}
+[INFO ] 2022-03-14 05:06:07.089 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-14 05:07:07.105 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-14 05:08:07.125 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-14 05:09:07.146 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-14 05:10:07.166 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-14 05:11:07.187 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-14 05:12:07.204 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-14 05:13:07.220 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-14 05:14:07.240 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-14 05:14:44.021 [main] SequenceFSM - Gathering metrics and stopping job with configuration: {jobName:'"twres',scaleOut:18,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'530e289cd2c70fa40f3e6cbca4791a89',isActive:true,tsList:[1647209684,1647210292,1647210885,1647211503,1647212112,1647212726,1647213337,1647213628,1647214252,1647214864,1647215474,1647216090,1647216371,1647217004,1647217622,1647218236,1647218852,1647219114,1647219767,1647220408,1647221244,1647221857,1647222663,1647223287,1647223909,1647224531,1647224600,1647225273,1647225897,1647226521,1647227145,1647227343,1647228016,1647228642,1647229279,1647229911,1647230086,1647230708,1647231285]}
+[INFO ] 2022-03-14 05:15:07.261 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (23/600) has expired
+[INFO ] 2022-03-14 05:16:07.281 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (83/600) has expired
+[INFO ] 2022-03-14 05:17:07.302 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (143/600) has expired
+[INFO ] 2022-03-14 05:18:07.323 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (203/600) has expired
+[INFO ] 2022-03-14 05:19:07.347 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (263/600) has expired
+[INFO ] 2022-03-14 05:20:07.368 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (323/600) has expired
+[INFO ] 2022-03-14 05:21:07.394 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (383/600) has expired
+[INFO ] 2022-03-14 05:22:07.411 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (443/600) has expired
+[INFO ] 2022-03-14 05:23:07.432 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (503/600) has expired
+[INFO ] 2022-03-14 05:23:34.077 [main] ClientsManager - flink_jobmanager_numRegisteredTaskManagers{namespace="twres"}
+[INFO ] 2022-03-14 05:23:35.791 [pool-2-thread-165] TimeSeries - File not found, creating data/cars/twres/8_twres_memUsed.out
+[INFO ] 2022-03-14 05:23:35.791 [pool-2-thread-66] TimeSeries - File not found, creating data/cars/twres/8_twres_bckPres.out
+[INFO ] 2022-03-14 05:23:35.791 [pool-2-thread-67] TimeSeries - File not found, creating data/cars/twres/8_twres_workRate.out
+[INFO ] 2022-03-14 05:23:35.792 [pool-2-thread-166] TimeSeries - File not found, creating data/cars/twres/8_twres_cpuLoad.out
+[INFO ] 2022-03-14 05:23:35.792 [pool-2-thread-167] TimeSeries - File not found, creating data/cars/twres/8_twres_thrRate.out
+[INFO ] 2022-03-14 05:23:35.792 [pool-2-thread-168] TimeSeries - File not found, creating data/cars/twres/8_twres_latency.out
+[INFO ] 2022-03-14 05:23:35.792 [pool-2-thread-169] TimeSeries - File not found, creating data/cars/twres/8_twres_chkDur.out
+[INFO ] 2022-03-14 05:23:35.792 [pool-2-thread-170] TimeSeries - File not found, creating data/cars/twres/8_twres_consLag.out
+[INFO ] 2022-03-14 05:23:35.792 [pool-2-thread-171] TimeSeries - File not found, creating data/cars/twres/8_twres_numRestarts.out
+[INFO ] 2022-03-14 05:23:35.793 [pool-2-thread-172] TimeSeries - File not found, creating data/cars/twres/8_twres_numWorkers.out
+[INFO ] 2022-03-14 05:23:42.099 [main] SequenceFSM - STATE-CHANGE: EXECUTE -> STOP

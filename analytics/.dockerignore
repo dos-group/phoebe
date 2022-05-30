@@ -1,0 +1,3 @@
+app/artifacts
+**/.pytest_cache/
+.idea/

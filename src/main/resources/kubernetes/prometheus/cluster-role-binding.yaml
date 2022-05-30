@@ -1,0 +1,15 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: prometheus-TO_REPLACE
+  labels:
+    app: prometheus
+    component: server
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: TO_REPLACE
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: prometheus-server

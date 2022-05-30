@@ -1,0 +1,35 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: bootstrap-flink-native
+spec:
+  backoffLimit: 5
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: flink
+          image: morgel/flink:1.14.4-bin-scala_2.11-java_11
+          imagePullPolicy: Always
+          command: ["/bin/bash", "-c", "$FLINK_HOME/bin/kubernetes-session.sh \
+        -Dkubernetes.cluster-id=flink-native \
+        -Dkubernetes.namespace=TO_REPLACE \
+        -Dkubernetes.container.image=morgel/flink:1.14.4-bin-scala_2.11-java_11 \
+        -Dkubernetes.container.imagePullPolicy=Always \
+        -Dkubernetes.rest-service.exposed.type=ClusterIP \
+        -Dkubernetes.service-account=default \
+        -Dkubernetes.jobmanager.annotations=\"prometheus.io/scrape:true,prometheus.io/port:9999\" \
+        -Dkubernetes.jobmanager.labels=\"component:jobmanager\" \
+        -Dkubernetes.taskmanager.annotations=\"prometheus.io/scrape:true,prometheus.io/port:9999\" \
+        -Dkubernetes.taskmanager.labels=\"component:taskmanager\" \
+        -Djobmanager.memory.process.size=\"4096m\" \
+        -Djobmanager.restart-strategy=\"fixeddelay\" \
+        -Djobmanager.restart-strategy.fixed-delay.attempts=100000 \
+        -Djobmanager.heartbeat.timeout=10000 \
+        -Djobmanager.heartbeat.interval=5000 \
+        -Dtaskmanager.memory.process.size=\"2048m\" \
+        -Dmetrics.reporters=prom \
+        -Dmetrics.reporter.prom.class=org.apache.flink.metrics.prometheus.PrometheusReporter \
+        -Dmetrics.reporter.prom.port=9999 \
+        -Dstate.savepoints.dir=hdfs:///flink/savepoints
+        "]

@@ -1,0 +1,1508 @@
+/usr/lib/jvm/graalvm-ce-java16-21.2.0/bin/java -javaagent:/home/hegemon/software/idea/lib/idea_rt.jar=34227:/home/hegemon/software/idea/bin -Dfile.encoding=UTF-8 -classpath /home/hegemon/projects/archon/phoebe/target/classes:/home/hegemon/projects/archon/common/target/classes:/home/hegemon/.m2/repository/io/fabric8/kubernetes-client/5.10.1/kubernetes-client-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-core/5.10.1/kubernetes-model-core-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-common/5.10.1/kubernetes-model-common-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-rbac/5.10.1/kubernetes-model-rbac-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-admissionregistration/5.10.1/kubernetes-model-admissionregistration-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-apps/5.10.1/kubernetes-model-apps-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-autoscaling/5.10.1/kubernetes-model-autoscaling-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-apiextensions/5.10.1/kubernetes-model-apiextensions-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-batch/5.10.1/kubernetes-model-batch-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-certificates/5.10.1/kubernetes-model-certificates-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-coordination/5.10.1/kubernetes-model-coordination-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-discovery/5.10.1/kubernetes-model-discovery-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-events/5.10.1/kubernetes-model-events-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-extensions/5.10.1/kubernetes-model-extensions-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-flowcontrol/5.10.1/kubernetes-model-flowcontrol-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-networking/5.10.1/kubernetes-model-networking-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-metrics/5.10.1/kubernetes-model-metrics-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-policy/5.10.1/kubernetes-model-policy-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-scheduling/5.10.1/kubernetes-model-scheduling-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-storageclass/5.10.1/kubernetes-model-storageclass-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/kubernetes-model-node/5.10.1/kubernetes-model-node-5.10.1.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.13.0/jackson-dataformat-yaml-2.13.0.jar:/home/hegemon/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.0/jackson-datatype-jsr310-2.13.0.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.jar:/home/hegemon/.m2/repository/io/fabric8/zjsonpatch/0.3.0/zjsonpatch-0.3.0.jar:/home/hegemon/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/home/hegemon/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/home/hegemon/.m2/repository/io/fabric8/chaosmesh-client/5.10.1/chaosmesh-client-5.10.1.jar:/home/hegemon/.m2/repository/io/fabric8/chaosmesh-model/5.10.1/chaosmesh-model-5.10.1.jar:/home/hegemon/.m2/repository/com/squareup/retrofit2/retrofit/2.9.0/retrofit-2.9.0.jar:/home/hegemon/.m2/repository/com/squareup/retrofit2/converter-gson/2.9.0/converter-gson-2.9.0.jar:/home/hegemon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/hegemon/.m2/repository/com/google/cloud/google-cloud-container/1.5.0/google-cloud-container-1.5.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-api/1.39.0/grpc-api-1.39.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-context/1.39.0/grpc-context-1.39.0.jar:/home/hegemon/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/hegemon/.m2/repository/io/grpc/grpc-stub/1.39.0/grpc-stub-1.39.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-protobuf/1.39.0/grpc-protobuf-1.39.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-protobuf-lite/1.39.0/grpc-protobuf-lite-1.39.0.jar:/home/hegemon/.m2/repository/com/google/api/api-common/1.10.4/api-common-1.10.4.jar:/home/hegemon/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/hegemon/.m2/repository/com/google/auto/value/auto-value-annotations/1.8.1/auto-value-annotations-1.8.1.jar:/home/hegemon/.m2/repository/com/google/protobuf/protobuf-java/3.17.3/protobuf-java-3.17.3.jar:/home/hegemon/.m2/repository/com/google/api/grpc/proto-google-common-protos/2.3.2/proto-google-common-protos-2.3.2.jar:/home/hegemon/.m2/repository/com/google/api/grpc/proto-google-cloud-container-v1beta1/1.5.0/proto-google-cloud-container-v1beta1-1.5.0.jar:/home/hegemon/.m2/repository/com/google/api/grpc/proto-google-cloud-container-v1/1.5.0/proto-google-cloud-container-v1-1.5.0.jar:/home/hegemon/.m2/repository/com/google/guava/guava/30.1.1-android/guava-30.1.1-android.jar:/home/hegemon/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/hegemon/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/hegemon/.m2/repository/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar:/home/hegemon/.m2/repository/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar:/home/hegemon/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/home/hegemon/.m2/repository/com/google/api/gax/1.66.0/gax-1.66.0.jar:/home/hegemon/.m2/repository/com/google/auth/google-auth-library-oauth2-http/0.26.0/google-auth-library-oauth2-http-0.26.0.jar:/home/hegemon/.m2/repository/com/google/http-client/google-http-client/1.39.2/google-http-client-1.39.2.jar:/home/hegemon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/hegemon/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/hegemon/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/hegemon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/hegemon/.m2/repository/io/opencensus/opencensus-contrib-http-util/0.28.0/opencensus-contrib-http-util-0.28.0.jar:/home/hegemon/.m2/repository/com/google/http-client/google-http-client-gson/1.39.2/google-http-client-gson-1.39.2.jar:/home/hegemon/.m2/repository/io/opencensus/opencensus-api/0.28.0/opencensus-api-0.28.0.jar:/home/hegemon/.m2/repository/com/google/api/gax-grpc/1.66.0/gax-grpc-1.66.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-auth/1.39.0/grpc-auth-1.39.0.jar:/home/hegemon/.m2/repository/com/google/auth/google-auth-library-credentials/0.26.0/google-auth-library-credentials-0.26.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-netty-shaded/1.39.0/grpc-netty-shaded-1.39.0.jar:/home/hegemon/.m2/repository/io/perfmark/perfmark-api/0.23.0/perfmark-api-0.23.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-core/1.39.0/grpc-core-1.39.0.jar:/home/hegemon/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/hegemon/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.20/animal-sniffer-annotations-1.20.jar:/home/hegemon/.m2/repository/io/grpc/grpc-alts/1.39.0/grpc-alts-1.39.0.jar:/home/hegemon/.m2/repository/io/grpc/grpc-grpclb/1.39.0/grpc-grpclb-1.39.0.jar:/home/hegemon/.m2/repository/com/google/protobuf/protobuf-java-util/3.17.3/protobuf-java-util-3.17.3.jar:/home/hegemon/.m2/repository/org/conscrypt/conscrypt-openjdk-uber/2.5.1/conscrypt-openjdk-uber-2.5.1.jar:/home/hegemon/.m2/repository/org/threeten/threetenbp/1.5.1/threetenbp-1.5.1.jar:/home/hegemon/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/hegemon/.m2/repository/org/scala-lang/scala-library/2.13.7/scala-library-2.13.7.jar:/home/hegemon/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/hegemon/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/hegemon/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/hegemon/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/hegemon/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.jar:/home/hegemon/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/home/hegemon/.m2/repository/com/vladmihalcea/hibernate-types-52/2.14.0/hibernate-types-52-2.14.0.jar:/home/hegemon/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.11.0/jackson-module-jaxb-annotations-2.11.0.jar:/home/hegemon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/home/hegemon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/home/hegemon/.m2/repository/org/apache/logging/log4j/log4j-api/2.14.1/log4j-api-2.14.1.jar:/home/hegemon/.m2/repository/org/apache/logging/log4j/log4j-core/2.14.1/log4j-core-2.14.1.jar:/home/hegemon/.m2/repository/com/lmax/disruptor/3.4.4/disruptor-3.4.4.jar:/home/hegemon/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.14.1/log4j-slf4j-impl-2.14.1.jar:/home/hegemon/.m2/repository/org/apache/kafka/kafka-clients/2.8.0/kafka-clients-2.8.0.jar:/home/hegemon/.m2/repository/com/github/luben/zstd-jni/1.4.9-1/zstd-jni-1.4.9-1.jar:/home/hegemon/.m2/repository/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar:/home/hegemon/.m2/repository/org/xerial/snappy/snappy-java/1.1.8.1/snappy-java-1.1.8.1.jar:/home/hegemon/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/hegemon/.m2/repository/org/xerial/sqlite-jdbc/3.36.0.2/sqlite-jdbc-3.36.0.2.jar:/home/hegemon/.m2/repository/com/squareup/okhttp3/logging-interceptor/4.9.2/logging-interceptor-4.9.2.jar:/home/hegemon/.m2/repository/com/squareup/okhttp3/okhttp/4.9.2/okhttp-4.9.2.jar:/home/hegemon/.m2/repository/com/squareup/okio/okio/2.8.0/okio-2.8.0.jar:/home/hegemon/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/kotlin-stdlib-common-1.4.0.jar:/home/hegemon/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.jar:/home/hegemon/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/hegemon/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.4.10/kotlin-stdlib-jdk8-1.4.10.jar:/home/hegemon/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.4.10/kotlin-stdlib-jdk7-1.4.10.jar:/home/hegemon/.m2/repository/com/github/distributed-intelligence-lab/AutoAD4j/v0.0.1/AutoAD4j-v0.0.1.jar:/home/hegemon/.m2/repository/com/github/distributed-intelligence-lab/AutoAD4j/algorithms/v0.0.1/algorithms-v0.0.1.jar:/home/hegemon/.m2/repository/gov/nist/math/jama/1.0.3/jama-1.0.3.jar:/home/hegemon/.m2/repository/com/github/distributed-intelligence-lab/AutoAD4j/deeplearning/v0.0.1/deeplearning-v0.0.1.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-core/1.0.0-beta4/deeplearning4j-core-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-tsne/1.0.0-beta4/deeplearning4j-tsne-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/deeplearning4j/nearestneighbor-core/1.0.0-beta4/nearestneighbor-core-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-datasets/1.0.0-beta4/deeplearning4j-datasets-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-common/1.0.0-beta4/deeplearning4j-common-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-datavec-iterators/1.0.0-beta4/deeplearning4j-datavec-iterators-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-modelimport/1.0.0-beta4/deeplearning4j-modelimport-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/bytedeco/javacpp/1.5/javacpp-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/hdf5-platform/1.10.5-1.5/hdf5-platform-1.10.5-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/hdf5/1.10.5-1.5/hdf5-1.10.5-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/hdf5/1.10.5-1.5/hdf5-1.10.5-1.5-linux-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/hdf5/1.10.5-1.5/hdf5-1.10.5-1.5-linux-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/hdf5/1.10.5-1.5/hdf5-1.10.5-1.5-linux-ppc64le.jar:/home/hegemon/.m2/repository/org/bytedeco/hdf5/1.10.5-1.5/hdf5-1.10.5-1.5-macosx-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/hdf5/1.10.5-1.5/hdf5-1.10.5-1.5-windows-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/hdf5/1.10.5-1.5/hdf5-1.10.5-1.5-windows-x86_64.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-nn/1.0.0-beta4/deeplearning4j-nn-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-utility-iterators/1.0.0-beta4/deeplearning4j-utility-iterators-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-util/1.0.0-beta4/deeplearning4j-util-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/lucee/oswego-concurrent/1.3.4/oswego-concurrent-1.3.4.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native-api/1.0.0-beta4/nd4j-native-api-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-common/1.0.0-beta4/nd4j-common-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-jackson/1.0.0-beta4/nd4j-jackson-1.0.0-beta4.jar:/home/hegemon/.m2/repository/com/github/oshi/oshi-core/3.4.2/oshi-core-3.4.2.jar:/home/hegemon/.m2/repository/net/java/dev/jna/jna-platform/4.3.0/jna-platform-4.3.0.jar:/home/hegemon/.m2/repository/net/java/dev/jna/jna/4.3.0/jna-4.3.0.jar:/home/hegemon/.m2/repository/it/unimi/dsi/fastutil/6.5.7/fastutil-6.5.7.jar:/home/hegemon/.m2/repository/org/apache/commons/commons-compress/1.16.1/commons-compress-1.16.1.jar:/home/hegemon/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-api/1.0.0-beta4/nd4j-api-1.0.0-beta4.jar:/home/hegemon/.m2/repository/com/jakewharton/byteunits/byteunits/0.9.1/byteunits-0.9.1.jar:/home/hegemon/.m2/repository/com/google/flatbuffers/flatbuffers-java/1.10.0/flatbuffers-java-1.10.0.jar:/home/hegemon/.m2/repository/com/github/os72/protobuf-java-shaded-351/0.9/protobuf-java-shaded-351-0.9.jar:/home/hegemon/.m2/repository/com/github/os72/protobuf-java-util-shaded-351/0.9/protobuf-java-util-shaded-351-0.9.jar:/home/hegemon/.m2/repository/uk/com/robust-it/cloning/1.9.3/cloning-1.9.3.jar:/home/hegemon/.m2/repository/commons-net/commons-net/3.1/commons-net-3.1.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-buffer/1.0.0-beta4/nd4j-buffer-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-context/1.0.0-beta4/nd4j-context-1.0.0-beta4.jar:/home/hegemon/.m2/repository/net/ericaro/neoitertools/1.0.0/neoitertools-1.0.0.jar:/home/hegemon/.m2/repository/org/nd4j/jackson/1.0.0-beta4/jackson-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar:/home/hegemon/.m2/repository/joda-time/joda-time/2.2/joda-time-2.2.jar:/home/hegemon/.m2/repository/org/datavec/datavec-api/1.0.0-beta4/datavec-api-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/home/hegemon/.m2/repository/com/clearspring/analytics/stream/2.7.0/stream-2.7.0.jar:/home/hegemon/.m2/repository/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar:/home/hegemon/.m2/repository/com/tdunning/t-digest/3.2/t-digest-3.2.jar:/home/hegemon/.m2/repository/org/datavec/datavec-data-image/1.0.0-beta4/datavec-data-image-1.0.0-beta4.jar:/home/hegemon/.m2/repository/com/github/jai-imageio/jai-imageio-core/1.3.0/jai-imageio-core-1.3.0.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/imageio/imageio-jpeg/3.1.1/imageio-jpeg-3.1.1.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/imageio/imageio-core/3.1.1/imageio-core-3.1.1.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/imageio/imageio-metadata/3.1.1/imageio-metadata-3.1.1.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/common/common-lang/3.1.1/common-lang-3.1.1.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/common/common-io/3.1.1/common-io-3.1.1.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/common/common-image/3.1.1/common-image-3.1.1.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/imageio/imageio-tiff/3.1.1/imageio-tiff-3.1.1.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/imageio/imageio-psd/3.1.1/imageio-psd-3.1.1.jar:/home/hegemon/.m2/repository/com/twelvemonkeys/imageio/imageio-bmp/3.1.1/imageio-bmp-3.1.1.jar:/home/hegemon/.m2/repository/org/bytedeco/javacv/1.5/javacv-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/ffmpeg/4.1.3-1.5/ffmpeg-4.1.3-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5/flycapture-2.13.3.31-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/libdc1394/2.2.5-1.5/libdc1394-2.2.5-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5/libfreenect-0.5.7-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5/libfreenect2-0.2.0-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/librealsense/1.12.1-1.5/librealsense-1.12.1-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/videoinput/0.200-1.5/videoinput-0.200-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5/artoolkitplus-2.3.1-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/flandmark/1.07-1.5/flandmark-1.07-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/tesseract/4.0.0-1.5/tesseract-4.0.0-1.5.jar:/home/hegemon/.m2/repository/org/openjfx/javafx-graphics/11/javafx-graphics-11.jar:/home/hegemon/.m2/repository/org/openjfx/javafx-graphics/11/javafx-graphics-11-linux.jar:/home/hegemon/.m2/repository/org/openjfx/javafx-base/11/javafx-base-11.jar:/home/hegemon/.m2/repository/org/openjfx/javafx-base/11/javafx-base-11-linux.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv-platform/4.0.1-1.5/opencv-platform-4.0.1-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-android-arm.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-android-arm64.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-android-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-android-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-ios-arm64.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-ios-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-linux-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-linux-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-linux-armhf.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-linux-ppc64le.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-macosx-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-windows-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/opencv/4.0.1-1.5/opencv-4.0.1-1.5-windows-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica-platform/1.78.0-1.5/leptonica-platform-1.78.0-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-android-arm.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-android-arm64.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-android-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-android-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-linux-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-linux-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-linux-armhf.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-linux-ppc64le.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-macosx-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-windows-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/leptonica/1.78.0-1.5/leptonica-1.78.0-1.5-windows-x86_64.jar:/home/hegemon/.m2/repository/org/deeplearning4j/deeplearning4j-ui-components/1.0.0-beta4/deeplearning4j-ui-components-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native-platform/1.0.0-beta4/nd4j-native-platform-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas-platform/0.3.5-1.5/openblas-platform-0.3.5-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-android-arm.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-android-arm64.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-android-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-android-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-ios-arm64.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-ios-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-linux-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-linux-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-linux-armhf.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-linux-ppc64le.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-macosx-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-windows-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/openblas/0.3.5-1.5/openblas-0.3.5-1.5-windows-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl-platform/2019.3-1.5/mkl-platform-2019.3-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl/2019.3-1.5/mkl-2019.3-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl/2019.3-1.5/mkl-2019.3-1.5-linux-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl/2019.3-1.5/mkl-2019.3-1.5-linux-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl/2019.3-1.5/mkl-2019.3-1.5-macosx-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl/2019.3-1.5/mkl-2019.3-1.5-windows-x86.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl/2019.3-1.5/mkl-2019.3-1.5-windows-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl-dnn-platform/0.18.1-1.5/mkl-dnn-platform-0.18.1-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl-dnn/0.18.1-1.5/mkl-dnn-0.18.1-1.5.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl-dnn/0.18.1-1.5/mkl-dnn-0.18.1-1.5-linux-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl-dnn/0.18.1-1.5/mkl-dnn-0.18.1-1.5-macosx-x86_64.jar:/home/hegemon/.m2/repository/org/bytedeco/mkl-dnn/0.18.1-1.5/mkl-dnn-0.18.1-1.5-windows-x86_64.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-android-arm.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-android-arm64.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-android-x86.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-android-x86_64.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-ios-arm64.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-ios-x86_64.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-linux-x86_64.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-macosx-x86_64.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-windows-x86_64.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-linux-ppc64le.jar:/home/hegemon/.m2/repository/org/nd4j/nd4j-native/1.0.0-beta4/nd4j-native-1.0.0-beta4-linux-armhf.jar de.tu_berlin.dos.arm.archon.phoebe.Run
+[INFO ] 2022-03-17 00:53:01.852 [main] SequenceFSM - STATE-CHANGE: START -> DEPLOY
+[INFO ] 2022-03-17 00:56:03.982 [OkHttp https://130.149.248.64:6443/...] K8sClient - Namespace (twres) DELETED
+[INFO ] 2022-03-17 00:56:04.553 [OkHttp https://130.149.248.64:6443/...] K8sClient - Namespace (twres) ADDED
+[INFO ] 2022-03-17 00:56:04.554 [main] ClientsManager - Helm deploy: { zookeeper: { repo : https://charts.bitnami.com/bitnami },{ values : kubernetes/zookeeper/values.yaml } }
+--repo https://charts.bitnami.com/bitnami
+--values /tmp/stream2file2237393442942652071.tmp
+binaries/helm install zookeeper zookeeper -n twres --repo https://charts.bitnami.com/bitnami --values /tmp/stream2file2237393442942652071.tmp
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - NAME: zookeeper
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - LAST DEPLOYED: Thu Mar 17 00:56:12 2022
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - NOTES:
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - CHART NAME: zookeeper
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - CHART VERSION: 8.1.2
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm - APP VERSION: 3.7.0
+[INFO ] 2022-03-17 00:56:13.704 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm - ** Please be patient while the chart is being deployed **
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm - ZooKeeper can be accessed via port 2181 on the following DNS name from within your cluster:
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -     zookeeper.twres.svc.cluster.local
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm - To connect to your ZooKeeper server run the following commands:
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -     export POD_NAME=$(kubectl get pods --namespace twres -l "app.kubernetes.io/name=zookeeper,app.kubernetes.io/instance=zookeeper,app.kubernetes.io/component=zookeeper" -o jsonpath="{.items[0].metadata.name}")
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -     kubectl exec -it $POD_NAME -- zkCli.sh
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm - To connect to your ZooKeeper server from outside the cluster execute the following commands:
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -     kubectl port-forward --namespace twres svc/zookeeper 2181: &
+[INFO ] 2022-03-17 00:56:13.705 [pool-4-thread-1] Helm -     zkCli.sh 127.0.0.1:2181
+[INFO ] 2022-03-17 00:56:13.710 [main] ClientsManager - Helm deploy: { kafka: { repo : https://charts.bitnami.com/bitnami },{ values : kubernetes/kafka/values.yaml } }
+--repo https://charts.bitnami.com/bitnami
+--values /tmp/stream2file18429813824785965262.tmp
+binaries/helm install kafka kafka -n twres --repo https://charts.bitnami.com/bitnami --values /tmp/stream2file18429813824785965262.tmp
+[INFO ] 2022-03-17 00:56:23.534 [pool-5-thread-1] Helm - NAME: kafka
+[INFO ] 2022-03-17 00:56:23.534 [pool-5-thread-1] Helm - LAST DEPLOYED: Thu Mar 17 00:56:22 2022
+[INFO ] 2022-03-17 00:56:23.534 [pool-5-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-17 00:56:23.534 [pool-5-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - NOTES:
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - CHART NAME: kafka
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - CHART VERSION: 15.4.1
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - APP VERSION: 3.1.0
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - ** Please be patient while the chart is being deployed **
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - Kafka can be accessed by consumers via port 9092 on the following DNS name from within your cluster:
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -     kafka.twres.svc.cluster.local
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm - Each Kafka broker can be accessed by producers via port 9092 on the following DNS name(s) from within your cluster:
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -     kafka-0.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -     kafka-1.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -     kafka-2.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -     kafka-3.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-17 00:56:23.535 [pool-5-thread-1] Helm -     kafka-4.kafka-headless.twres.svc.cluster.local:9092
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm - To create a pod that you can use as a Kafka client run the following commands:
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -     kubectl run kafka-client --restart='Never' --image docker.io/bitnami/kafka:3.0.0-debian-10-r97 --namespace twres --command -- sleep infinity
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -     kubectl exec --tty -i kafka-client --namespace twres -- bash
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -     PRODUCER:
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -         kafka-console-producer.sh \
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -             --broker-list kafka-0.kafka-headless.twres.svc.cluster.local:9092,kafka-1.kafka-headless.twres.svc.cluster.local:9092,kafka-2.kafka-headless.twres.svc.cluster.local:9092,kafka-3.kafka-headless.twres.svc.cluster.local:9092,kafka-4.kafka-headless.twres.svc.cluster.local:9092 \
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -             --topic test
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -     CONSUMER:
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -         kafka-console-consumer.sh \
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -             --bootstrap-server kafka.twres.svc.cluster.local:9092 \
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -             --topic test \
+[INFO ] 2022-03-17 00:56:23.536 [pool-5-thread-1] Helm -             --from-beginning
+[INFO ] 2022-03-17 00:56:23.540 [main] ClientsManager - Helm deploy: { redis-cluster: { repo : https://charts.bitnami.com/bitnami },{ values : kubernetes/redis-cluster/values.yaml },{ version : 7.2.5 } }
+--repo https://charts.bitnami.com/bitnami
+--version 7.2.5
+--values /tmp/stream2file18444629864752550140.tmp
+binaries/helm install redis-cluster redis-cluster -n twres --repo https://charts.bitnami.com/bitnami --version 7.2.5 --values /tmp/stream2file18444629864752550140.tmp
+[INFO ] 2022-03-17 00:56:32.831 [pool-6-thread-1] Helm - NAME: redis-cluster
+[INFO ] 2022-03-17 00:56:32.831 [pool-6-thread-1] Helm - LAST DEPLOYED: Thu Mar 17 00:56:30 2022
+[INFO ] 2022-03-17 00:56:32.831 [pool-6-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-17 00:56:32.831 [pool-6-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-17 00:56:32.831 [pool-6-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-17 00:56:32.831 [pool-6-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-17 00:56:32.831 [pool-6-thread-1] Helm - NOTES:
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm - CHART NAME: redis-cluster
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm - CHART VERSION: 7.2.5
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm - APP VERSION: 6.2.6** Please be patient while the chart is being deployed **
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm - You have deployed a Redis&trade; Cluster accessible only from within you Kubernetes Cluster.INFO: The Job to create the cluster will be created.To connect to your Redis&trade; cluster:
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm - 1. Run a Redis&trade; pod that you can use as a client:
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm - kubectl run --namespace twres redis-cluster-client --rm --tty -i --restart='Never' \
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm - --image docker.io/bitnami/redis-cluster:6.2.6-debian-10-r49 -- bash
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:32.832 [pool-6-thread-1] Helm - 2. Connect using the Redis&trade; CLI:
+[INFO ] 2022-03-17 00:56:32.833 [pool-6-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:32.833 [pool-6-thread-1] Helm - redis-cli -c -h redis-cluster
+[INFO ] 2022-03-17 00:56:32.837 [main] ClientsManager - Helm deploy: { prometheus: { repo : https://prometheus-community.github.io/helm-charts },{ values : kubernetes/prometheus/values.yaml } }
+--repo https://prometheus-community.github.io/helm-charts
+--values /tmp/stream2file544191748409458804.tmp
+binaries/helm install prometheus prometheus -n twres --repo https://prometheus-community.github.io/helm-charts --values /tmp/stream2file544191748409458804.tmp
+[INFO ] 2022-03-17 00:56:37.865 [pool-7-thread-1] Helm - NAME: prometheus
+[INFO ] 2022-03-17 00:56:37.866 [pool-7-thread-1] Helm - LAST DEPLOYED: Thu Mar 17 00:56:37 2022
+[INFO ] 2022-03-17 00:56:37.866 [pool-7-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-17 00:56:37.866 [pool-7-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-17 00:56:37.867 [pool-7-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-17 00:56:37.867 [pool-7-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-17 00:56:37.867 [pool-7-thread-1] Helm - NOTES:
+[INFO ] 2022-03-17 00:56:37.867 [pool-7-thread-1] Helm - The Prometheus server can be accessed via port 80 on the following DNS name from within your cluster:
+[INFO ] 2022-03-17 00:56:37.867 [pool-7-thread-1] Helm - prometheus-server.twres.svc.cluster.local
+[INFO ] 2022-03-17 00:56:37.868 [pool-7-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:37.868 [pool-7-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:37.868 [pool-7-thread-1] Helm - Get the Prometheus server URL by running these commands in the same shell:
+[INFO ] 2022-03-17 00:56:37.868 [pool-7-thread-1] Helm -   export POD_NAME=$(kubectl get pods --namespace twres -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
+[INFO ] 2022-03-17 00:56:37.869 [pool-7-thread-1] Helm -   kubectl --namespace twres port-forward $POD_NAME 9090
+[INFO ] 2022-03-17 00:56:37.869 [pool-7-thread-1] Helm - #################################################################################
+[INFO ] 2022-03-17 00:56:37.869 [pool-7-thread-1] Helm - ######   WARNING: Persistence is disabled!!! You will lose your data when   #####
+[INFO ] 2022-03-17 00:56:37.869 [pool-7-thread-1] Helm - ######            the Server pod is terminated.                             #####
+[INFO ] 2022-03-17 00:56:37.869 [pool-7-thread-1] Helm - #################################################################################
+[INFO ] 2022-03-17 00:56:37.870 [pool-7-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:37.870 [pool-7-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:37.870 [pool-7-thread-1] Helm - #################################################################################
+[INFO ] 2022-03-17 00:56:37.870 [pool-7-thread-1] Helm - ######   WARNING: Pod Security Policy has been moved to a global property.  #####
+[INFO ] 2022-03-17 00:56:37.870 [pool-7-thread-1] Helm - ######            use .Values.podSecurityPolicy.enabled with pod-based      #####
+[INFO ] 2022-03-17 00:56:37.871 [pool-7-thread-1] Helm - ######            annotations                                               #####
+[INFO ] 2022-03-17 00:56:37.871 [pool-7-thread-1] Helm - ######            (e.g. .Values.nodeExporter.podSecurityPolicy.annotations) #####
+[INFO ] 2022-03-17 00:56:37.871 [pool-7-thread-1] Helm - #################################################################################
+[INFO ] 2022-03-17 00:56:37.872 [pool-7-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:37.872 [pool-7-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:37.872 [pool-7-thread-1] Helm -
+[INFO ] 2022-03-17 00:56:37.872 [pool-7-thread-1] Helm - For more information on running Prometheus, visit:
+[INFO ] 2022-03-17 00:56:37.873 [pool-7-thread-1] Helm - https://prometheus.io/
+[INFO ] 2022-03-17 00:56:37.888 [main] ClientsManager - Helm deploy: { generators: { chart : kubernetes/generators } }
+binaries/helm install generators /home/hegemon/projects/archon/phoebe/target/classes/kubernetes/generators -n twres
+[INFO ] 2022-03-17 00:56:39.488 [pool-8-thread-1] Helm - NAME: generators
+[INFO ] 2022-03-17 00:56:39.489 [pool-8-thread-1] Helm - LAST DEPLOYED: Thu Mar 17 00:56:38 2022
+[INFO ] 2022-03-17 00:56:39.489 [pool-8-thread-1] Helm - NAMESPACE: twres
+[INFO ] 2022-03-17 00:56:39.489 [pool-8-thread-1] Helm - STATUS: deployed
+[INFO ] 2022-03-17 00:56:39.489 [pool-8-thread-1] Helm - REVISION: 1
+[INFO ] 2022-03-17 00:56:39.489 [pool-8-thread-1] Helm - TEST SUITE: None
+[INFO ] 2022-03-17 00:56:39.492 [main] ClientsManager - Yaml deploy: { prometheus: { 1 : kubernetes/prometheus/cluster-role-binding.yaml },{ 2 : kubernetes/prometheus/prometheus-rest-service.yaml } }
+[INFO ] 2022-03-17 00:56:39.794 [main] ClientsManager - Yaml deploy: { flinkProactive: { 1 : kubernetes/flink/proactive/cluster-role-binding.yaml },{ 2 : kubernetes/flink/proactive/bootstrap-flink-native.yaml },{ 3 : kubernetes/flink/proactive/jobmanager-rest-service.yaml } }
+[INFO ] 2022-03-17 00:57:10.142 [main] SequenceFSM - Uploading JAR...
+[INFO ] 2022-03-17 00:59:42.447 [main] SequenceFSM - Jar uploaded with id: 53130db4-7e13-4aee-afbd-94b95bfac2f2_jobs-1.0.jar
+[INFO ] 2022-03-17 00:59:42.447 [main] SequenceFSM - STATE-CHANGE: DEPLOY -> MODEL
+[INFO ] 2022-03-17 00:59:42.551 [pool-2-thread-1] SequenceFSM - Training model, is still running: false
+[INFO ] 2022-03-17 00:59:43.551 [main] SequenceFSM - STATE-CHANGE: MODEL -> INITIALIZE
+[INFO ] 2022-03-17 00:59:43.552 [main] SequenceFSM - Start workload generation with configuration: {"brokerList":"kafka.twres.svc.cluster.local:9092","topic":"input","generatorType":"ADS","limiterType":"SINE","limiterMaxNoise":0.1,"amplitude":20000,"verticalPhase":20000,"period":7200}
+[INFO ] 2022-03-17 00:59:45.963 [main] ClientsManager - Generator started with parameters: {"generatorType":"ADS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"SINE","limiterMaxNoise":0.1,"amplitude":20000,"period":7200,"verticalPhase":20000,"fileName":"datasets/cars_1D_1S_25K.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-17 00:59:47.424 [main] ClientsManager - Generator started with parameters: {"generatorType":"ADS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"SINE","limiterMaxNoise":0.1,"amplitude":20000,"period":7200,"verticalPhase":20000,"fileName":"datasets/cars_1D_1S_25K.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-17 00:59:48.812 [main] ClientsManager - Generator started with parameters: {"generatorType":"ADS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"SINE","limiterMaxNoise":0.1,"amplitude":20000,"period":7200,"verticalPhase":20000,"fileName":"datasets/cars_1D_1S_25K.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-17 00:59:50.263 [main] ClientsManager - Generator started with parameters: {"generatorType":"ADS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"SINE","limiterMaxNoise":0.1,"amplitude":20000,"period":7200,"verticalPhase":20000,"fileName":"datasets/cars_1D_1S_25K.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-17 00:59:51.771 [main] ClientsManager - Generator started with parameters: {"generatorType":"ADS","topic":"input","brokerList":"kafka.twres.svc.cluster.local:9092","limiterType":"SINE","limiterMaxNoise":0.1,"amplitude":20000,"period":7200,"verticalPhase":20000,"fileName":"datasets/cars_1D_1S_25K.csv","header":true,"separator":"|","scale":1.0,"redisHost":"redis-cluster","redisPort":6379}
+[INFO ] 2022-03-17 00:59:56.046 [main] SequenceFSM - Started job with configuration: {"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":6,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 00:59:56.046 [main] SequenceFSM - STATE-CHANGE: INITIALIZE -> OPTIMIZE
+[INFO ] 2022-03-17 00:59:56.147 [main] SequenceFSM - 6, 1647475197
+[INFO ] 2022-03-17 00:59:56.147 [main] SequenceFSM - STATE-CHANGE: OPTIMIZE -> EXECUTE
+[INFO ] 2022-03-17 00:59:56.147 [main] SequenceFSM - [1200, 3943, 6686, 9429, 12172, 14915, 17658, 20401]
+[INFO ] 2022-03-17 01:00:56.179 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (61/600) has expired
+[INFO ] 2022-03-17 01:01:56.204 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (121/600) has expired
+[INFO ] 2022-03-17 01:02:56.232 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (181/600) has expired
+[INFO ] 2022-03-17 01:03:56.250 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (241/600) has expired
+[INFO ] 2022-03-17 01:04:56.276 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (301/600) has expired
+[INFO ] 2022-03-17 01:05:56.303 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (361/600) has expired
+[INFO ] 2022-03-17 01:06:56.331 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (421/600) has expired
+[INFO ] 2022-03-17 01:07:56.357 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (481/600) has expired
+[INFO ] 2022-03-17 01:08:56.384 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (541/600) has expired
+[INFO ] 2022-03-17 01:09:56.410 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (601/600) has expired
+[INFO ] 2022-03-17 01:09:56.420 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:6,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'9bd6b6ea23b18caa4b23b00a3e35692e',isActive:true,tsList:[1647475196]}
+[INFO ] 2022-03-17 01:10:00.546 [pool-2-thread-1] SequenceFSM - Current scaleout: 6, Predicted scaleout: 10
+[INFO ] 2022-03-17 01:10:00.546 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 1
+[INFO ] 2022-03-17 01:10:00.571 [pool-2-thread-1] SequenceFSM - 6, 1647475801
+[INFO ] 2022-03-17 01:10:00.571 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 01:10:12.686 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 01:10:12.767 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":10,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 01:11:14.674 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 01:12:14.700 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 01:13:14.725 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 01:14:14.750 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 01:15:14.775 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 01:16:14.800 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 01:17:14.823 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 01:18:14.855 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 01:19:14.880 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 01:19:56.583 [pool-9-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-8
+[WARN ] 2022-03-17 01:19:56.639 [pool-9-thread-1] VersionUsageUtils - The client is using resource type 'networkchaos' with unstable version 'v1alpha1'
+[INFO ] 2022-03-17 01:20:14.906 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (18/600) has expired
+[INFO ] 2022-03-17 01:21:14.931 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (78/600) has expired
+[INFO ] 2022-03-17 01:22:14.956 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (138/600) has expired
+[INFO ] 2022-03-17 01:23:14.980 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (198/600) has expired
+[INFO ] 2022-03-17 01:24:15.004 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (258/600) has expired
+[INFO ] 2022-03-17 01:25:15.028 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (319/600) has expired
+[INFO ] 2022-03-17 01:26:15.050 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (379/600) has expired
+[INFO ] 2022-03-17 01:27:15.070 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (439/600) has expired
+[INFO ] 2022-03-17 01:28:15.093 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (499/600) has expired
+[INFO ] 2022-03-17 01:29:15.116 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (559/600) has expired
+[INFO ] 2022-03-17 01:30:15.139 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (619/600) has expired
+[INFO ] 2022-03-17 01:30:15.140 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:10,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'29aca5b823e0bbcb7ad4b92c09139519',isActive:true,tsList:[1647475196,1647475815,1647476397]}
+[INFO ] 2022-03-17 01:30:19.637 [pool-2-thread-1] SequenceFSM - Current scaleout: 10, Predicted scaleout: 12
+[INFO ] 2022-03-17 01:30:19.637 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 2
+[INFO ] 2022-03-17 01:30:19.659 [pool-2-thread-1] SequenceFSM - 10, 1647477020
+[INFO ] 2022-03-17 01:30:19.659 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 01:31:17.038 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 01:31:17.108 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":12,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 01:32:18.445 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 01:33:18.520 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 01:34:18.547 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 01:35:18.579 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 01:36:18.653 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 01:37:18.675 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 01:38:18.698 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 01:39:18.721 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 01:40:18.746 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 01:41:18.762 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 01:41:18.762 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:12,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'a0b8de8c6722e4602bc6aaab83995e84',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079]}
+[INFO ] 2022-03-17 01:41:23.039 [pool-2-thread-1] SequenceFSM - Current scaleout: 12, Predicted scaleout: 13
+[INFO ] 2022-03-17 01:41:23.039 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 3
+[INFO ] 2022-03-17 01:41:23.062 [pool-2-thread-1] SequenceFSM - 12, 1647477684
+[INFO ] 2022-03-17 01:41:23.062 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 01:42:21.773 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 01:42:21.840 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":13,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 01:43:23.166 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 01:44:23.185 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 01:45:23.204 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 01:46:23.226 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 01:47:23.248 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 01:48:23.272 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 01:49:23.294 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 01:50:23.317 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 01:51:23.339 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 01:52:23.360 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 01:52:23.361 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'2b00de1531c393e6c563cbd46a08034a',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744]}
+[INFO ] 2022-03-17 02:05:39.657 [pool-9-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-11
+[INFO ] 2022-03-17 02:51:22.645 [pool-9-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-10
+[INFO ] 2022-03-17 03:32:24.637 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.net.SocketTimeoutException: timeout
+[INFO ] 2022-03-17 03:33:24.718 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (2522/600) has expired
+[INFO ] 2022-03-17 03:33:24.718 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'2b00de1531c393e6c563cbd46a08034a',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883]}
+[INFO ] 2022-03-17 03:33:35.028 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 11
+[INFO ] 2022-03-17 03:33:35.028 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 4
+[INFO ] 2022-03-17 03:33:35.044 [pool-2-thread-1] SequenceFSM - 13, 1647484416
+[INFO ] 2022-03-17 03:33:35.044 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:33:36.917 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 03:33:36.986 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":11,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 03:34:38.841 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 03:35:38.859 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 03:36:38.880 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 03:37:05.570 [pool-9-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-9
+[INFO ] 2022-03-17 03:37:38.902 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (33/600) has expired
+[INFO ] 2022-03-17 03:38:38.924 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (93/600) has expired
+[INFO ] 2022-03-17 03:39:38.945 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (153/600) has expired
+[INFO ] 2022-03-17 03:40:38.967 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (213/600) has expired
+[INFO ] 2022-03-17 03:41:38.989 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (273/600) has expired
+[INFO ] 2022-03-17 03:42:39.012 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (333/600) has expired
+[INFO ] 2022-03-17 03:43:39.034 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (394/600) has expired
+[INFO ] 2022-03-17 03:44:39.053 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (454/600) has expired
+[INFO ] 2022-03-17 03:45:39.072 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (514/600) has expired
+[INFO ] 2022-03-17 03:46:39.091 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (574/600) has expired
+[INFO ] 2022-03-17 03:47:39.110 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (634/600) has expired
+[INFO ] 2022-03-17 03:47:39.111 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:11,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'555f04eec2934fab1e7c1b6b4dc1ed1e',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626]}
+[INFO ] 2022-03-17 03:47:43.746 [pool-2-thread-1] SequenceFSM - Current scaleout: 11, Predicted scaleout: 12
+[INFO ] 2022-03-17 03:47:43.747 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 5
+[INFO ] 2022-03-17 03:47:43.769 [pool-2-thread-1] SequenceFSM - 11, 1647485264
+[INFO ] 2022-03-17 03:47:43.769 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:55.123 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:55.388 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:55.609 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:55.827 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:56.043 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:56.264 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:56.461 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:56.661 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:56.862 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:57.064 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:57.255 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:57.454 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:57.650 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:57.795 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:57.929 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:58.064 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:58.199 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:58.384 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:58.568 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:58.751 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:58.886 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:59.020 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:59.157 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:59.337 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:59.519 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:59.704 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:47:59.836 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:00.019 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:00.201 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:00.386 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:00.519 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:00.651 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:00.833 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:01.013 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:01.192 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:01.323 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:01.504 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:01.684 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:01.863 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:01.994 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:02.124 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:02.254 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:02.385 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:02.516 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:02.695 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:02.876 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:03.055 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:03.184 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:03.315 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:03.446 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:03.631 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:03.812 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:03.990 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:04.175 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:04.356 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:04.535 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:04.665 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:04.796 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:04.925 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:05.106 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:48:05.188 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 03:49:05.210 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (720/600) has expired
+[INFO ] 2022-03-17 03:49:05.211 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:11,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'555f04eec2934fab1e7c1b6b4dc1ed1e',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626]}
+[INFO ] 2022-03-17 03:49:08.921 [pool-2-thread-1] SequenceFSM - Current scaleout: 11, Predicted scaleout: 12
+[INFO ] 2022-03-17 03:49:08.921 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 6
+[INFO ] 2022-03-17 03:49:08.941 [pool-2-thread-1] SequenceFSM - 11, 1647485349
+[INFO ] 2022-03-17 03:49:08.941 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:21.704 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:21.899 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:22.094 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:22.289 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:22.436 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:22.579 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:22.710 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:22.893 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:23.072 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:23.253 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:23.383 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:23.513 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:23.693 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:23.874 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:24.055 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:24.235 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:24.417 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:24.597 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:24.734 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:24.911 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:25.093 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:25.275 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:25.405 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:25.583 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:25.762 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:25.943 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:26.073 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:26.251 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:26.431 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:26.611 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:26.793 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:26.971 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:27.152 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:27.331 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:27.511 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:27.641 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:27.779 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:27.909 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:28.087 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:28.267 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:28.447 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:28.627 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:28.808 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:28.991 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:29.172 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:29.351 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:29.532 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:29.662 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:29.844 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:30.023 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:30.204 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:30.383 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:30.563 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:30.744 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:30.922 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:31.106 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:31.288 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:31.466 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:31.648 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:31.827 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:49:31.913 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 03:50:31.931 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (806/600) has expired
+[INFO ] 2022-03-17 03:50:31.932 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:11,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'555f04eec2934fab1e7c1b6b4dc1ed1e',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626]}
+[INFO ] 2022-03-17 03:50:35.470 [pool-2-thread-1] SequenceFSM - Current scaleout: 11, Predicted scaleout: 12
+[INFO ] 2022-03-17 03:50:35.470 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 7
+[INFO ] 2022-03-17 03:50:35.490 [pool-2-thread-1] SequenceFSM - 11, 1647485436
+[INFO ] 2022-03-17 03:50:35.490 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:49.044 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:49.241 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:49.437 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:49.632 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:49.872 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:50.132 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:50.313 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:50.491 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:50.621 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:50.799 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:50.982 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:51.165 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:51.344 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:51.523 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:51.706 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:51.886 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:52.067 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:52.247 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:52.379 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:52.558 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:52.738 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:52.920 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:53.099 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:53.279 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:53.459 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:53.640 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:53.821 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:54.000 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:54.130 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:54.260 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:54.439 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:54.620 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:54.801 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:54.979 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:55.158 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:55.341 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:55.472 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:55.650 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:55.831 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:56.012 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:56.192 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:56.370 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:56.550 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:56.732 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:56.911 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:57.041 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:57.218 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:57.399 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:57.579 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:57.759 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:57.939 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:58.119 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:58.250 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:58.380 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:58.512 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:58.691 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:58.872 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:59.051 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:59.180 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:59.309 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:50:59.339 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 03:51:59.362 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (894/600) has expired
+[INFO ] 2022-03-17 03:51:59.363 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:11,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'555f04eec2934fab1e7c1b6b4dc1ed1e',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626]}
+[INFO ] 2022-03-17 03:52:02.960 [pool-2-thread-1] SequenceFSM - Current scaleout: 11, Predicted scaleout: 12
+[INFO ] 2022-03-17 03:52:02.960 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 8
+[INFO ] 2022-03-17 03:52:02.982 [pool-2-thread-1] SequenceFSM - 11, 1647485523
+[INFO ] 2022-03-17 03:52:02.982 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 03:53:23.017 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 03:53:23.085 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":12,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 03:54:24.539 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 03:55:24.557 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 03:56:24.579 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 03:57:24.602 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 03:58:24.625 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 03:59:24.645 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 04:00:24.665 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 04:01:24.684 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 04:02:24.708 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 04:03:24.727 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 04:03:24.727 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:12,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'b18eecb162a716a814a3f8d3cf169aa4',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605]}
+[INFO ] 2022-03-17 04:03:29.060 [pool-2-thread-1] SequenceFSM - Current scaleout: 12, Predicted scaleout: 13
+[INFO ] 2022-03-17 04:03:29.060 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 9
+[INFO ] 2022-03-17 04:03:29.082 [pool-2-thread-1] SequenceFSM - 12, 1647486210
+[INFO ] 2022-03-17 04:03:29.082 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:04:32.736 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 04:04:32.820 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":13,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 04:05:34.220 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 04:06:34.238 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 04:07:34.258 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 04:08:34.279 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 04:09:34.300 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 04:10:34.317 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 04:11:34.339 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 04:12:34.360 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 04:13:34.379 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 04:14:34.400 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 04:14:34.400 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'65e8005e7080ae01e51f77de92797b3e',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275]}
+[INFO ] 2022-03-17 04:14:38.789 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-17 04:14:38.789 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 10
+[INFO ] 2022-03-17 04:14:38.808 [pool-2-thread-1] SequenceFSM - 13, 1647486879
+[INFO ] 2022-03-17 04:14:38.809 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:56.042 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:56.232 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:56.426 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:56.625 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:56.813 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:56.947 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:57.126 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:57.307 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:57.492 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:57.623 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:57.755 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:57.934 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:58.117 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:58.301 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:58.479 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:58.663 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:58.843 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:58.974 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:59.104 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:59.234 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:59.365 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:59.495 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:59.675 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:14:59.854 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:00.035 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:00.215 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:00.394 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:00.580 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:00.711 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:00.841 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:01.025 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:01.208 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:01.386 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:01.517 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:01.646 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:01.775 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:01.905 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:02.082 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:02.263 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:02.444 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:02.575 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:02.704 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:02.884 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:03.062 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:03.239 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:03.370 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:03.500 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:03.635 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:03.765 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:03.901 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:04.031 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:04.211 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:04.392 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:04.571 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:04.700 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:04.830 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:05.005 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:05.187 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:05.366 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:05.546 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:15:05.629 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 04:16:05.651 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (691/600) has expired
+[INFO ] 2022-03-17 04:16:05.651 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'65e8005e7080ae01e51f77de92797b3e',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275]}
+[INFO ] 2022-03-17 04:16:09.535 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-17 04:16:09.535 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 11
+[INFO ] 2022-03-17 04:16:09.556 [pool-2-thread-1] SequenceFSM - 13, 1647486970
+[INFO ] 2022-03-17 04:16:09.556 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:30.556 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:30.786 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:31.015 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:31.235 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:31.449 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:31.659 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:31.872 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:32.083 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:32.277 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:32.477 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:32.671 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:32.870 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:33.067 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:33.263 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:33.458 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:33.653 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:33.849 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:34.044 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:34.189 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:34.336 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:34.483 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:34.630 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:34.777 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:34.973 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:35.165 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:35.352 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:35.546 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:35.738 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:35.936 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:36.134 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:36.329 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:36.516 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:36.705 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:36.893 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:37.032 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:37.210 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:37.398 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:37.578 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:37.759 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:37.941 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:38.118 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:38.298 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:38.480 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:38.660 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:38.838 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:38.968 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:39.098 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:39.228 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:39.407 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:39.586 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:39.767 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:39.946 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:40.128 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:40.306 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:40.441 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:40.619 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:40.799 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:40.979 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:41.108 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:41.237 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:16:41.266 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 04:17:41.291 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (787/600) has expired
+[INFO ] 2022-03-17 04:17:41.292 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'65e8005e7080ae01e51f77de92797b3e',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275]}
+[INFO ] 2022-03-17 04:17:44.757 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-17 04:17:44.757 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 12
+[INFO ] 2022-03-17 04:17:44.778 [pool-2-thread-1] SequenceFSM - 13, 1647487065
+[INFO ] 2022-03-17 04:17:44.778 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:00.269 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:00.452 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:00.630 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:00.811 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:00.991 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:01.171 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:01.301 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:01.430 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:01.561 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:01.691 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:01.823 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:02.002 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:02.183 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:02.368 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:02.498 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:02.631 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:02.762 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:02.892 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:03.071 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:03.250 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:03.431 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:03.611 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:03.790 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:03.972 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:04.103 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:04.282 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:04.462 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:04.644 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:04.774 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:04.906 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:05.085 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:05.263 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:05.443 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:05.575 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:05.754 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:05.936 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:06.115 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:06.246 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:06.426 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:06.604 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:06.786 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:06.971 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:07.151 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:07.331 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:07.511 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:07.690 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:07.867 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:08.047 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:08.228 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:08.407 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:08.588 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:08.767 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:08.947 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:09.128 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:09.306 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:09.489 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:09.666 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:09.797 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:09.926 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:10.104 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:18:10.182 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 04:19:10.204 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (876/600) has expired
+[INFO ] 2022-03-17 04:19:10.204 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'65e8005e7080ae01e51f77de92797b3e',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275]}
+[INFO ] 2022-03-17 04:19:14.012 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-17 04:19:14.012 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 13
+[INFO ] 2022-03-17 04:19:14.034 [pool-2-thread-1] SequenceFSM - 13, 1647487155
+[INFO ] 2022-03-17 04:19:14.034 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:20:06.666 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 04:20:06.731 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":14,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 04:21:07.739 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 04:22:07.761 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 04:22:48.561 [pool-9-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-88
+[INFO ] 2022-03-17 04:23:07.784 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (19/600) has expired
+[INFO ] 2022-03-17 04:24:07.806 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (79/600) has expired
+[INFO ] 2022-03-17 04:25:07.829 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (139/600) has expired
+[INFO ] 2022-03-17 04:26:07.852 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (199/600) has expired
+[INFO ] 2022-03-17 04:27:07.874 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (259/600) has expired
+[INFO ] 2022-03-17 04:28:07.897 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (319/600) has expired
+[INFO ] 2022-03-17 04:29:07.921 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (379/600) has expired
+[INFO ] 2022-03-17 04:30:07.948 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (439/600) has expired
+[INFO ] 2022-03-17 04:31:07.971 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (499/600) has expired
+[INFO ] 2022-03-17 04:32:07.995 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (559/600) has expired
+[INFO ] 2022-03-17 04:33:08.018 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (620/600) has expired
+[INFO ] 2022-03-17 04:33:08.018 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:14,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'b141b43a79d4711e41b91fee68ea6d58',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369]}
+[INFO ] 2022-03-17 04:33:12.528 [pool-2-thread-1] SequenceFSM - Current scaleout: 14, Predicted scaleout: 1
+[INFO ] 2022-03-17 04:33:12.528 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 14
+[INFO ] 2022-03-17 04:33:12.550 [pool-2-thread-1] SequenceFSM - 14, 1647487993
+[INFO ] 2022-03-17 04:33:12.551 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:33:12.832 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 04:33:12.898 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":1,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 04:34:14.188 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 04:35:14.210 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 04:36:14.232 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 04:37:14.254 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 04:38:14.277 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 04:39:14.296 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 04:40:14.318 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 04:41:14.335 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 04:42:14.357 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 04:43:14.375 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 04:43:14.376 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:1,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'0ad465f0ceeea7a5be410e886aadb144',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995]}
+[INFO ] 2022-03-17 04:43:18.988 [pool-2-thread-1] SequenceFSM - Current scaleout: 1, Predicted scaleout: 2
+[INFO ] 2022-03-17 04:43:18.988 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 15
+[INFO ] 2022-03-17 04:43:19.009 [pool-2-thread-1] SequenceFSM - 1, 1647488599
+[INFO ] 2022-03-17 04:43:19.009 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:43:31.254 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 04:43:31.314 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":2,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 04:44:32.693 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 04:45:32.730 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 04:46:32.766 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 04:47:32.803 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 04:48:32.830 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 04:49:32.861 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 04:50:32.884 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 04:51:32.906 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 04:52:32.929 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 04:53:32.953 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 04:53:32.953 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:2,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'2aa9018bf257244b9c213f23046e1bc4',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613]}
+[INFO ] 2022-03-17 04:53:37.417 [pool-2-thread-1] SequenceFSM - Current scaleout: 2, Predicted scaleout: 6
+[INFO ] 2022-03-17 04:53:37.417 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 16
+[INFO ] 2022-03-17 04:53:37.440 [pool-2-thread-1] SequenceFSM - 2, 1647489218
+[INFO ] 2022-03-17 04:53:37.440 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 04:53:43.998 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 04:53:44.058 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":6,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 04:54:45.255 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 04:55:45.276 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 04:56:45.295 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 04:57:45.315 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 04:58:45.338 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 04:59:45.357 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 05:00:45.378 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 05:01:45.401 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 05:02:45.420 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 05:03:45.442 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 05:03:45.442 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:6,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'34e26ce24bddb79731724c326776475f',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226]}
+[INFO ] 2022-03-17 05:03:49.932 [pool-2-thread-1] SequenceFSM - Current scaleout: 6, Predicted scaleout: 9
+[INFO ] 2022-03-17 05:03:49.933 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 17
+[INFO ] 2022-03-17 05:03:49.953 [pool-2-thread-1] SequenceFSM - 6, 1647489830
+[INFO ] 2022-03-17 05:03:49.953 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:19.092 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:19.289 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:19.475 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:19.654 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:19.785 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:19.918 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:20.100 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:20.281 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:20.464 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:20.594 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:20.774 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:20.955 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:21.134 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:21.311 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:21.491 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:21.672 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:21.850 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:22.032 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:22.213 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:22.391 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:22.575 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:22.755 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:22.937 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:23.070 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:23.201 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:23.378 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:23.561 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:23.742 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:23.871 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:24.049 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:24.233 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:24.413 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:24.591 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:24.770 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:24.952 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:25.135 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:25.316 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:25.495 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:25.674 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:25.855 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:26.036 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:26.214 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:26.397 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:26.577 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:26.756 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:26.939 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:27.121 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:27.298 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:27.427 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:27.558 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:27.687 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:27.820 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:27.999 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:28.178 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:28.358 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:28.538 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:28.718 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:28.900 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:29.081 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:29.264 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:04:29.343 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 05:05:29.364 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (704/600) has expired
+[INFO ] 2022-03-17 05:05:29.364 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:6,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'34e26ce24bddb79731724c326776475f',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226]}
+[INFO ] 2022-03-17 05:05:33.242 [pool-2-thread-1] SequenceFSM - Current scaleout: 6, Predicted scaleout: 9
+[INFO ] 2022-03-17 05:05:33.243 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 18
+[INFO ] 2022-03-17 05:05:33.263 [pool-2-thread-1] SequenceFSM - 6, 1647489934
+[INFO ] 2022-03-17 05:05:33.263 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:05:49.701 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 05:05:49.766 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":9,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 05:06:50.979 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 05:07:51.001 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 05:08:31.564 [pool-9-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-98
+[INFO ] 2022-03-17 05:08:51.021 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (20/600) has expired
+[INFO ] 2022-03-17 05:09:51.044 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (80/600) has expired
+[INFO ] 2022-03-17 05:10:51.065 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (140/600) has expired
+[INFO ] 2022-03-17 05:11:51.087 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (200/600) has expired
+[INFO ] 2022-03-17 05:12:51.103 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (260/600) has expired
+[INFO ] 2022-03-17 05:13:51.121 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (320/600) has expired
+[INFO ] 2022-03-17 05:14:51.143 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (380/600) has expired
+[INFO ] 2022-03-17 05:15:51.170 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (440/600) has expired
+[INFO ] 2022-03-17 05:16:51.192 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (500/600) has expired
+[INFO ] 2022-03-17 05:17:51.212 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (560/600) has expired
+[INFO ] 2022-03-17 05:18:51.233 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (620/600) has expired
+[INFO ] 2022-03-17 05:18:51.234 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:9,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'5411807cc051da4e6ac19777b300f90b',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112]}
+[INFO ] 2022-03-17 05:18:55.783 [pool-2-thread-1] SequenceFSM - Current scaleout: 9, Predicted scaleout: 12
+[INFO ] 2022-03-17 05:18:55.783 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 19
+[INFO ] 2022-03-17 05:18:55.807 [pool-2-thread-1] SequenceFSM - 9, 1647490736
+[INFO ] 2022-03-17 05:18:55.808 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:19:23.918 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 05:19:23.983 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":12,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 05:20:25.384 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 05:21:25.404 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 05:22:25.428 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 05:23:25.451 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 05:24:25.473 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 05:25:25.496 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 05:26:25.517 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 05:27:25.540 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 05:28:25.562 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 05:29:25.584 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 05:29:25.584 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:12,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'88b997acaca126e43b0cc16c479abe8c',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766]}
+[INFO ] 2022-03-17 05:29:30.298 [pool-2-thread-1] SequenceFSM - Current scaleout: 12, Predicted scaleout: 13
+[INFO ] 2022-03-17 05:29:30.298 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 20
+[INFO ] 2022-03-17 05:29:30.320 [pool-2-thread-1] SequenceFSM - 12, 1647491371
+[INFO ] 2022-03-17 05:29:30.320 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:41.942 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:42.122 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:42.298 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:42.478 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:42.658 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:42.839 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:43.018 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:43.149 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:43.278 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:43.407 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:43.587 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:43.766 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:43.949 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:44.126 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:44.311 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:44.494 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:44.674 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:44.850 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:45.032 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:45.210 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:45.385 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:45.562 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:45.739 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:45.920 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:46.098 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:46.229 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:46.359 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:46.537 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:47.011 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:47.196 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:47.376 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:47.556 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:47.735 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:47.915 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:48.094 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:48.270 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:48.451 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:48.632 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:48.763 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:48.894 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:49.023 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:49.152 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:49.330 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:49.510 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:49.691 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:49.870 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:50.046 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:50.227 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:50.408 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:50.587 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:50.770 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:50.904 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:51.033 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:51.162 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:51.292 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:51.424 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:51.553 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:51.731 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:51.913 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:52.092 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:29:52.173 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 05:30:52.193 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (687/600) has expired
+[INFO ] 2022-03-17 05:30:52.194 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:12,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'88b997acaca126e43b0cc16c479abe8c',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766]}
+[INFO ] 2022-03-17 05:30:56.122 [pool-2-thread-1] SequenceFSM - Current scaleout: 12, Predicted scaleout: 13
+[INFO ] 2022-03-17 05:30:56.122 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 21
+[INFO ] 2022-03-17 05:30:56.143 [pool-2-thread-1] SequenceFSM - 12, 1647491457
+[INFO ] 2022-03-17 05:30:56.143 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:31:44.347 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 05:31:44.411 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":13,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 05:32:45.636 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 05:33:45.657 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 05:34:45.682 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 05:35:45.704 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 05:36:45.726 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 05:37:45.749 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 05:38:45.771 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 05:39:45.794 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 05:40:45.819 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 05:41:45.846 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 05:41:45.846 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'e0b9f55d3be03b8b2cdbff8fde21b6f8',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506]}
+[INFO ] 2022-03-17 05:41:50.327 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-17 05:41:50.327 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 22
+[INFO ] 2022-03-17 05:41:50.345 [pool-2-thread-1] SequenceFSM - 13, 1647492111
+[INFO ] 2022-03-17 05:41:50.345 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:09.989 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:10.174 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:10.356 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:10.539 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:10.717 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:10.897 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:11.076 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:11.257 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:11.436 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:11.565 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:11.693 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:11.872 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:12.052 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:12.234 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:12.363 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:12.542 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:12.724 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:12.902 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:13.082 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:13.262 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:13.441 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:13.571 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:13.702 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:13.885 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:14.061 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:14.241 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:14.369 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:14.550 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:14.728 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:14.909 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:15.090 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:15.275 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:15.454 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:15.634 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:15.814 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:15.992 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:16.173 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:16.352 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:16.529 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:16.663 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:16.841 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:17.021 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:17.203 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:17.381 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:17.562 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:17.742 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:17.922 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:18.102 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:18.284 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:18.466 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:18.645 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:18.824 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:18.955 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:19.134 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:19.313 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:19.493 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:19.625 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:19.806 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:19.987 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:20.165 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:42:20.247 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 05:43:20.268 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (695/600) has expired
+[INFO ] 2022-03-17 05:43:20.268 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'e0b9f55d3be03b8b2cdbff8fde21b6f8',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506]}
+[INFO ] 2022-03-17 05:43:24.079 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-17 05:43:24.079 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 23
+[INFO ] 2022-03-17 05:43:24.100 [pool-2-thread-1] SequenceFSM - 13, 1647492205
+[INFO ] 2022-03-17 05:43:24.100 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:41.659 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:41.861 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:42.043 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:42.222 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:42.403 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:42.582 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:42.712 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:42.893 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:43.075 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:43.254 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:43.435 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:43.623 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:44.052 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:44.235 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:44.418 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:44.602 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:44.732 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:44.913 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:45.093 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:45.278 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:45.456 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:45.638 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:45.817 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:45.946 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:46.076 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:46.207 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:46.387 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:46.564 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:46.750 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:46.883 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:47.062 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:47.243 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:47.421 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:47.600 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:47.785 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:47.964 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:48.143 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:48.320 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:48.501 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:48.681 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:48.862 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:49.042 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:49.170 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:49.304 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:49.480 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:49.656 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:49.839 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:50.016 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:50.198 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:50.380 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:50.513 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:50.696 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:50.877 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:51.057 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:51.234 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:51.414 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:51.593 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:51.724 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:51.904 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:52.081 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:43:52.164 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 05:44:52.184 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (787/600) has expired
+[INFO ] 2022-03-17 05:44:52.184 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'e0b9f55d3be03b8b2cdbff8fde21b6f8',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506]}
+[INFO ] 2022-03-17 05:44:55.924 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-17 05:44:55.924 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 24
+[INFO ] 2022-03-17 05:44:55.944 [pool-2-thread-1] SequenceFSM - 13, 1647492296
+[INFO ] 2022-03-17 05:44:55.944 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:22.598 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:22.777 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:22.958 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:23.139 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:23.317 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:23.498 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:23.684 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:23.865 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:24.046 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:24.226 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:24.355 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:24.484 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:24.664 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:24.845 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:25.026 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:25.204 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:25.382 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:25.563 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:25.691 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:25.870 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:26.048 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:26.229 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:26.360 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:26.542 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:26.722 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:26.902 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:27.036 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:27.167 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:27.298 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:27.476 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:27.652 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:27.835 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:27.964 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:28.145 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:28.327 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:28.507 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:28.688 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:28.866 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:29.044 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:29.176 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:29.355 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:29.537 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:29.717 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:30.102 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:30.287 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:30.464 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:30.641 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:30.822 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:31.001 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:31.185 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:31.366 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:31.546 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:31.726 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:31.908 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:32.089 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:32.268 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:32.399 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:32.577 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:32.756 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:32.935 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:45:33.012 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 05:46:33.034 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (888/600) has expired
+[INFO ] 2022-03-17 05:46:33.035 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:13,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'e0b9f55d3be03b8b2cdbff8fde21b6f8',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506]}
+[INFO ] 2022-03-17 05:46:37.013 [pool-2-thread-1] SequenceFSM - Current scaleout: 13, Predicted scaleout: 14
+[INFO ] 2022-03-17 05:46:37.013 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 25
+[INFO ] 2022-03-17 05:46:37.035 [pool-2-thread-1] SequenceFSM - 13, 1647492398
+[INFO ] 2022-03-17 05:46:37.035 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 05:47:29.933 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 05:47:29.998 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":14,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 05:48:31.159 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 05:49:31.176 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 05:50:31.198 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 05:51:31.216 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 05:52:31.239 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 05:53:31.256 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 05:54:14.568 [pool-9-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-97
+[INFO ] 2022-03-17 05:54:31.278 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (17/600) has expired
+[INFO ] 2022-03-17 05:55:31.300 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (77/600) has expired
+[INFO ] 2022-03-17 05:56:31.322 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (137/600) has expired
+[INFO ] 2022-03-17 05:57:31.341 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (197/600) has expired
+[INFO ] 2022-03-17 05:58:31.360 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (257/600) has expired
+[INFO ] 2022-03-17 05:59:31.382 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (317/600) has expired
+[INFO ] 2022-03-17 06:00:31.404 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (377/600) has expired
+[INFO ] 2022-03-17 06:01:31.421 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (437/600) has expired
+[INFO ] 2022-03-17 06:02:31.439 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (497/600) has expired
+[INFO ] 2022-03-17 06:03:31.458 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (557/600) has expired
+[INFO ] 2022-03-17 06:04:31.476 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (617/600) has expired
+[INFO ] 2022-03-17 06:04:31.476 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:14,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'150ea4649fcfbf582e3b0d51fd273265',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855]}
+[INFO ] 2022-03-17 06:04:36.321 [pool-2-thread-1] SequenceFSM - Current scaleout: 14, Predicted scaleout: 15
+[INFO ] 2022-03-17 06:04:36.321 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 26
+[INFO ] 2022-03-17 06:04:36.342 [pool-2-thread-1] SequenceFSM - 14, 1647493477
+[INFO ] 2022-03-17 06:04:36.342 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:05:47.298 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 06:05:47.362 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":15,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 06:06:48.654 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 06:07:48.675 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 06:08:48.697 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 06:09:48.719 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 06:10:48.737 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 06:11:48.756 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 06:12:48.773 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 06:13:48.793 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 06:14:48.810 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 06:15:48.834 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 06:15:48.834 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:15,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'ae683d60b1d759788842c4a117e7fbc4',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855,1647493549]}
+[INFO ] 2022-03-17 06:15:53.357 [pool-2-thread-1] SequenceFSM - Current scaleout: 15, Predicted scaleout: 16
+[INFO ] 2022-03-17 06:15:53.357 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 27
+[INFO ] 2022-03-17 06:15:53.381 [pool-2-thread-1] SequenceFSM - 15, 1647494154
+[INFO ] 2022-03-17 06:15:53.381 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:04.434 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:04.640 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:04.847 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:05.044 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:05.243 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:05.439 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:05.637 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:05.785 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:05.929 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:06.068 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:06.261 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:06.452 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:06.642 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:06.781 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:06.921 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:07.061 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:07.202 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:07.391 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:07.579 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:07.770 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:07.958 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:08.147 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:08.336 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:08.521 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:08.709 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:08.896 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:09.085 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:09.276 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:09.464 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:09.603 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:09.741 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:09.876 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:10.007 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:10.150 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:10.282 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:10.417 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:10.551 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:10.733 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:10.919 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:11.109 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:11.243 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:11.425 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:11.611 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:11.795 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:11.926 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:12.059 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:12.243 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:12.423 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:12.604 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:12.793 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:12.977 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:13.158 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:13.292 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:13.428 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:13.614 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:13.798 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:13.986 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:14.123 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:14.257 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:14.390 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:16:14.423 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 06:17:14.449 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (686/600) has expired
+[INFO ] 2022-03-17 06:17:14.449 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:15,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'ae683d60b1d759788842c4a117e7fbc4',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855,1647493549]}
+[INFO ] 2022-03-17 06:17:18.009 [pool-2-thread-1] SequenceFSM - Current scaleout: 15, Predicted scaleout: 16
+[INFO ] 2022-03-17 06:17:18.009 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 28
+[INFO ] 2022-03-17 06:17:18.031 [pool-2-thread-1] SequenceFSM - 15, 1647494239
+[INFO ] 2022-03-17 06:17:18.031 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:54.103 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:54.311 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:54.448 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:54.633 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:54.815 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:54.997 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:55.225 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:55.455 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:55.649 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:55.835 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:56.020 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:56.204 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:56.345 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:56.482 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:56.615 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:56.803 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:56.987 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:57.170 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:57.304 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:57.486 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:57.667 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:57.855 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:58.042 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:58.230 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:58.415 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:58.550 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:58.737 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:58.924 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:59.113 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:59.299 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:59.482 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:59.665 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:59.799 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:17:59.981 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:00.169 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:00.353 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:00.542 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:00.725 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:00.909 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:01.044 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:01.230 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:01.419 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:01.607 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:01.787 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:01.974 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:02.160 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:02.295 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:02.476 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:02.656 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:02.839 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:02.973 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:03.157 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:03.343 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:03.529 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:03.713 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:03.899 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:04.084 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:04.215 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:04.399 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:04.591 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:18:04.673 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 06:19:04.696 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (796/600) has expired
+[INFO ] 2022-03-17 06:19:04.696 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:15,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'ae683d60b1d759788842c4a117e7fbc4',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855,1647493549]}
+[INFO ] 2022-03-17 06:19:08.758 [pool-2-thread-1] SequenceFSM - Current scaleout: 15, Predicted scaleout: 16
+[INFO ] 2022-03-17 06:19:08.758 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 29
+[INFO ] 2022-03-17 06:19:08.780 [pool-2-thread-1] SequenceFSM - 15, 1647494349
+[INFO ] 2022-03-17 06:19:08.780 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:46.173 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:46.364 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:46.549 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:46.733 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:46.863 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:46.994 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:47.175 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:47.356 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:47.535 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:47.715 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:47.898 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:48.076 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:48.257 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:48.436 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:48.614 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:48.798 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:48.980 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:49.163 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:49.350 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:49.531 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:49.664 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:49.844 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:50.024 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:50.204 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:50.387 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:50.566 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:50.749 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:50.881 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:51.013 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:51.198 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:51.336 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:51.518 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:51.701 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:51.994 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:52.173 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:52.355 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:52.537 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:52.719 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:52.900 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:53.080 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:53.209 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:53.392 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:53.576 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:53.755 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:53.886 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:54.069 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:54.250 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:54.431 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:54.612 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:54.792 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:54.971 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:55.104 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:55.284 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:55.463 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:55.643 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:55.773 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:55.951 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:56.133 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:56.315 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:56.496 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:19:56.581 [pool-2-thread-1] SequenceFSM - Problem optimizing target job with message: java.lang.IllegalStateException: Unable to restart, throwing exception
+[INFO ] 2022-03-17 06:20:56.604 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (908/600) has expired
+[INFO ] 2022-03-17 06:20:56.605 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:15,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'ae683d60b1d759788842c4a117e7fbc4',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855,1647493549]}
+[INFO ] 2022-03-17 06:21:00.648 [pool-2-thread-1] SequenceFSM - Current scaleout: 15, Predicted scaleout: 16
+[INFO ] 2022-03-17 06:21:00.648 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 30
+[INFO ] 2022-03-17 06:21:00.671 [pool-2-thread-1] SequenceFSM - 15, 1647494461
+[INFO ] 2022-03-17 06:21:00.671 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:22:02.253 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 06:22:02.323 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":16,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 06:23:03.520 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 06:24:03.540 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 06:25:03.564 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 06:26:03.587 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 06:27:03.609 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 06:28:03.632 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 06:29:03.721 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 06:30:03.746 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 06:31:03.766 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 06:32:03.788 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (600/600) has expired
+[INFO ] 2022-03-17 06:32:03.789 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:16,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'c7ba14086a58c735311c6bee98690488',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855,1647493549,1647494524]}
+[INFO ] 2022-03-17 06:32:08.309 [pool-2-thread-1] SequenceFSM - Current scaleout: 16, Predicted scaleout: 17
+[INFO ] 2022-03-17 06:32:08.309 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 31
+[INFO ] 2022-03-17 06:32:08.329 [pool-2-thread-1] SequenceFSM - 16, 1647495129
+[INFO ] 2022-03-17 06:32:08.329 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:32:08.720 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 06:32:08.792 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":17,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 06:33:10.043 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 06:34:10.065 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 06:35:10.086 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 06:36:10.110 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 06:37:10.136 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 06:38:10.159 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 06:39:10.177 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 06:39:57.599 [pool-9-thread-1] SequenceFSM - Injecting delay into taskManager: flink-native-taskmanager-1-184
+[INFO ] 2022-03-17 06:40:10.201 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (13/600) has expired
+[INFO ] 2022-03-17 06:41:10.226 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (73/600) has expired
+[INFO ] 2022-03-17 06:42:10.251 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (133/600) has expired
+[INFO ] 2022-03-17 06:43:10.275 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (193/600) has expired
+[INFO ] 2022-03-17 06:44:10.296 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (253/600) has expired
+[INFO ] 2022-03-17 06:45:10.369 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (313/600) has expired
+[INFO ] 2022-03-17 06:46:10.390 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (373/600) has expired
+[INFO ] 2022-03-17 06:47:10.414 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (433/600) has expired
+[INFO ] 2022-03-17 06:48:10.438 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (493/600) has expired
+[INFO ] 2022-03-17 06:49:10.462 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (553/600) has expired
+[INFO ] 2022-03-17 06:50:10.485 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (613/600) has expired
+[INFO ] 2022-03-17 06:50:10.485 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:17,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'5a0d5d6159c59989dec0fc73786f0028',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855,1647493549,1647494524,1647495131,1647495598]}
+[INFO ] 2022-03-17 06:50:15.348 [pool-2-thread-1] SequenceFSM - Current scaleout: 17, Predicted scaleout: 5
+[INFO ] 2022-03-17 06:50:15.348 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 32
+[INFO ] 2022-03-17 06:50:15.369 [pool-2-thread-1] SequenceFSM - 17, 1647496216
+[INFO ] 2022-03-17 06:50:15.369 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 06:50:15.760 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 06:50:15.830 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":5,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 06:51:17.035 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 06:52:17.057 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 06:53:17.081 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 06:54:17.106 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 06:55:17.129 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 06:56:17.150 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 06:57:17.171 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 06:58:17.276 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 06:59:17.296 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (540/600) has expired
+[INFO ] 2022-03-17 06:59:56.026 [main] SequenceFSM - Gathering metrics and stopping job with configuration: {jobName:'"twres',scaleOut:5,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'055353ef3010ad93aba5bf10d84ce7ea',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855,1647493549,1647494524,1647495131,1647495598,1647496218,1647496797]}
+[INFO ] 2022-03-17 07:00:17.317 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (21/600) has expired
+[INFO ] 2022-03-17 07:01:17.341 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (81/600) has expired
+[INFO ] 2022-03-17 07:02:17.406 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (141/600) has expired
+[INFO ] 2022-03-17 07:03:17.429 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (201/600) has expired
+[INFO ] 2022-03-17 07:04:17.451 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (261/600) has expired
+[INFO ] 2022-03-17 07:05:17.471 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (321/600) has expired
+[INFO ] 2022-03-17 07:06:17.493 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (381/600) has expired
+[INFO ] 2022-03-17 07:07:17.512 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (441/600) has expired
+[INFO ] 2022-03-17 07:08:17.535 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (501/600) has expired
+[INFO ] 2022-03-17 07:09:17.584 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (561/600) has expired
+[INFO ] 2022-03-17 07:10:17.651 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (621/600) has expired
+[INFO ] 2022-03-17 07:10:17.651 [pool-2-thread-1] SequenceFSM - Running evaluation for job: {jobName:'"twres',scaleOut:5,brokerList:'kafka.twres.svc.cluster.local:9092',consumerTopic:'input',producerTopic:'output',jobName:'twres',jobId:'055353ef3010ad93aba5bf10d84ce7ea',isActive:true,tsList:[1647475196,1647475815,1647476397,1647477079,1647477744,1647479140,1647481883,1647484419,1647484626,1647485605,1647486275,1647487208,1647487369,1647487995,1647488613,1647489226,1647489951,1647490112,1647490766,1647491506,1647492452,1647492855,1647493549,1647494524,1647495131,1647495598,1647496218,1647496797]}
+[INFO ] 2022-03-17 07:10:32.642 [pool-2-thread-1] SequenceFSM - Current scaleout: 5, Predicted scaleout: 11
+[INFO ] 2022-03-17 07:10:32.642 [pool-2-thread-1] SequenceFSM - Reconfiguration initiated, count: 33
+[INFO ] 2022-03-17 07:10:32.666 [pool-2-thread-1] SequenceFSM - 5, 1647497433
+[INFO ] 2022-03-17 07:10:32.666 [pool-2-thread-1] ClientsManager - Saving job
+[INFO ] 2022-03-17 07:10:47.965 [pool-2-thread-1] ClientsManager - Save complete
+[INFO ] 2022-03-17 07:10:48.025 [pool-2-thread-1] ClientsManager - Restarting job from savepoint with:{"programArgsList":["--brokerList","kafka.twres.svc.cluster.local:9092","--consumerTopic","input","--producerTopic","output","--jobName","twres","--redisHost","redis-cluster.twres.svc.cluster.local","--redisPort","6379"],"parallelism":11,"entryClass":"de.tu_berlin.dos.arm.streaming_experiment_suite.jobs.YahooStreamingBenchmark"}
+[INFO ] 2022-03-17 07:11:49.240 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (60/600) has expired
+[INFO ] 2022-03-17 07:12:49.261 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (120/600) has expired
+[INFO ] 2022-03-17 07:13:49.284 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (180/600) has expired
+[INFO ] 2022-03-17 07:14:49.307 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (240/600) has expired
+[INFO ] 2022-03-17 07:15:49.328 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (300/600) has expired
+[INFO ] 2022-03-17 07:16:49.348 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (360/600) has expired
+[INFO ] 2022-03-17 07:17:49.368 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (420/600) has expired
+[INFO ] 2022-03-17 07:18:49.389 [pool-2-thread-1] SequenceFSM - Wait till evaluation interval (480/600) has expired
+[INFO ] 2022-03-17 07:19:04.837 [main] ClientsManager - flink_jobmanager_numRegisteredTaskManagers{namespace="twres"}
+[INFO ] 2022-03-17 07:19:06.852 [pool-2-thread-305] TimeSeries - File not found, creating data/ads/twres/2_twres_thrRate.out
+[INFO ] 2022-03-17 07:19:06.852 [pool-2-thread-66] TimeSeries - File not found, creating data/ads/twres/2_twres_numWorkers.out
+[INFO ] 2022-03-17 07:19:06.852 [pool-2-thread-67] TimeSeries - File not found, creating data/ads/twres/2_twres_cpuLoad.out
+[INFO ] 2022-03-17 07:19:06.852 [pool-2-thread-306] TimeSeries - File not found, creating data/ads/twres/2_twres_latency.out
+[INFO ] 2022-03-17 07:19:06.852 [pool-2-thread-307] TimeSeries - File not found, creating data/ads/twres/2_twres_numRestarts.out
+[INFO ] 2022-03-17 07:19:06.853 [pool-2-thread-308] TimeSeries - File not found, creating data/ads/twres/2_twres_memUsed.out
+[INFO ] 2022-03-17 07:19:06.853 [pool-2-thread-310] TimeSeries - File not found, creating data/ads/twres/2_twres_workRate.out
+[INFO ] 2022-03-17 07:19:06.853 [pool-2-thread-309] TimeSeries - File not found, creating data/ads/twres/2_twres_bckPres.out
+[INFO ] 2022-03-17 07:19:06.854 [pool-2-thread-311] TimeSeries - File not found, creating data/ads/twres/2_twres_consLag.out
+[INFO ] 2022-03-17 07:19:06.856 [pool-2-thread-312] TimeSeries - File not found, creating data/ads/twres/2_twres_chkDur.out
+[INFO ] 2022-03-17 07:19:13.200 [main] SequenceFSM - STATE-CHANGE: EXECUTE -> STOP

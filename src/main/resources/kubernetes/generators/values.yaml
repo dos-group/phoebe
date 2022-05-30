@@ -1,0 +1,19 @@
+
+replicaCount: 5
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  enabled: true
+
+  type: NodePort
+
+  port: 8080
+
+  nodePorts:
+    - 32001
+    - 32002
+    - 32003
+    - 32004
+    - 32005

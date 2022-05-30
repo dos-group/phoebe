@@ -1,0 +1,12 @@
+pydantic
+numpy
+scipy
+pandas
+pytest
+scikit-learn
+pmdarima
+matplotlib
+fastapi
+dill
+requests
+uvicorn[standard]
