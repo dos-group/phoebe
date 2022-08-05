@@ -13,6 +13,6 @@ In this paper we present Phoebe, a proactive approach to system auto-tuning for 
 The folder repository structure and contents are described as follows:
 
 - analytics: Contains the Pyhthon based analytics engine.
-- binaries: Contains (helm)[https://helm.sh/] binary and streaming jobs.
+- binaries: Contains [helm](https://helm.sh/) binary and streaming jobs.
 - data: Contains metrics from experimental runs.
 - src/main: Contains the phoebe protoype which interacts with the Kubernetes cluster and targeted jobs.
